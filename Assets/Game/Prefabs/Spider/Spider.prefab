@@ -104,7 +104,7 @@ MonoBehaviour:
   isMatched: 0
   destroyEffect: {fileID: 7996929449281041747, guid: cf4a90311494e9e42a524d08f423a992, type: 3}
   blastSize: 1
-  scoreValue: -100
+  scoreValue: -400
 --- !u!61 &4282959106297984805
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -122,7 +122,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 7.77, y: 6.93}
+    oldSize: {x: 7.7810526, y: 6.93}
     newSize: {x: 19.2, y: 10.8}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
