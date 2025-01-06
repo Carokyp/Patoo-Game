@@ -15,7 +15,7 @@ public class RoundManager : MonoBehaviour
     public GameObject nextButton;
     public GameObject shufflePanel;
 
-    private bool endingRound = false;
+    public bool endingRound = false;
     private Board board;
 
     public int currentScore;
@@ -24,10 +24,15 @@ public class RoundManager : MonoBehaviour
 
     public int scoreTarget1, scoreTarget2, scoreTarget3;
 
+    public float min;
+    public float sec;
+
+
    
     
     void Awake()
     {
+        Time.timeScale = 1;
         uiMan = FindObjectOfType<UIManager>();
         board = FindObjectOfType<Board>();
         levelManager = FindObjectOfType<LevelManager>();
@@ -47,6 +52,10 @@ public class RoundManager : MonoBehaviour
 
             roundTime -= Time.deltaTime;
 
+            min = Mathf.FloorToInt(roundTime / 60);
+            sec = roundTime % 60;
+
+
             if (roundTime <= 0)
             {
                 roundTime = 0;
@@ -62,14 +71,14 @@ public class RoundManager : MonoBehaviour
             endingRound = false;
         }
 
-        uiMan.timeText.text = roundTime.ToString("0") + "s";
+        uiMan.timeText.text = string.Format("{0:0} : {1:0} s", min, sec);
 
         displayScore = Mathf.Lerp(displayScore, currentScore, scoreSpeed * Time.deltaTime);
         uiMan.scoreText.text = displayScore.ToString("0");
 
     }
 
-    private void WinCheck() 
+    public void WinCheck() 
     {
 
         uiMan.roundOverScreen.SetActive(true);
@@ -148,7 +157,7 @@ public class RoundManager : MonoBehaviour
             
             SFXManager.instance.PlayLoseSound();
 
-
+            Time.timeScale = 0;
 
         }
 

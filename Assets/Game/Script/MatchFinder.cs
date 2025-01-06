@@ -17,12 +17,17 @@ public class MatchFinder : MonoBehaviour
     public bool test;
     public bool canShuffle = true;
     public int availableMatches = 0;
+    bool firstMatch = false;
+    public bool woodLevel = false;
+    private RoundManager roundManager;
     
 
     private void Awake()
     {
         board = FindObjectOfType<Board>();
         uiMan = FindObjectOfType<UIManager>();
+        roundManager = FindObjectOfType<RoundManager>();
+
     }
 
 
@@ -436,6 +441,8 @@ public class MatchFinder : MonoBehaviour
 
                             
 
+                            
+
                            
                         }
                     }
@@ -453,6 +460,14 @@ public class MatchFinder : MonoBehaviour
         
 
         CheckForSpiders();
+        firstMatch = true;
+
+        if (woodLevel == true && availableMatches <= 0)
+        {
+            roundManager.WinCheck();
+            roundManager.shufflePanel.SetActive(false);
+            roundManager.endingRound = false;
+        }
     }
 
     
@@ -526,8 +541,11 @@ public class MatchFinder : MonoBehaviour
                     {
                         board.allLeafs[x, y].isMatched = true;
                         currentMatches.Add(board.allLeafs[x, y]);
-
-                        StartCoroutine(SadDog());
+                        if (firstMatch == true)
+                        {
+                            StartCoroutine(SadDog());
+                        }
+                        
 
                     }
 
