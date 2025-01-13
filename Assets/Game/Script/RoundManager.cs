@@ -27,6 +27,8 @@ public class RoundManager : MonoBehaviour
     public float min;
     public float sec;
 
+    private bool hasAddBeenShowed = false;
+
 
    
     
@@ -161,8 +163,21 @@ public class RoundManager : MonoBehaviour
 
         }
 
-
+        if (hasAddBeenShowed == false)
+        {
+            ShowAdds.adShowed++;
+            Debug.Log(ShowAdds.adShowed);
+            /* StartCoroutine(AddTimer());*/
+            hasAddBeenShowed = true;
+        }
   
+    }
+    IEnumerator AddTimer() 
+    {
+        yield return new WaitForSeconds(2f);
+        /*ShowAdds.adShowed++;
+        Debug.Log(ShowAdds.adShowed);*/
+    
     }
 
 }
