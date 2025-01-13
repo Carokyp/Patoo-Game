@@ -1,11 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Audio;
 
 public class SFXManager : MonoBehaviour
 {
     public static SFXManager instance;
-
+    public AudioMixer musicMixer;
+   
     private void Awake()
     {
         instance = this;
@@ -53,5 +55,10 @@ public class SFXManager : MonoBehaviour
         loseSound.Play();
     }
 
-
+    public void StopMusic() 
+    { 
+     
+  
+    
+    }
 }

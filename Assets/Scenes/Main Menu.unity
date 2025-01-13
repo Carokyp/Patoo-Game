@@ -337,6 +337,11 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 7129723114434076004, guid: 4fe483a7a90dc8d41ac3d8ced845b904, type: 3}
   m_PrefabInstance: {fileID: 1488139970}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &276128972 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1787787547154929644, guid: 8a4754a8875cf4d4ea7fc28213a17692, type: 3}
+  m_PrefabInstance: {fileID: 7967896917803779653}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &286432981
 GameObject:
   m_ObjectHideFlags: 0
@@ -1528,7 +1533,7 @@ AudioSource:
   m_GameObject: {fileID: 1690525550}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: -906830959870545926, guid: 6a76bc001680ea543a3b9be848167dc8, type: 2}
   m_audioClip: {fileID: 8300000, guid: acfc17dab35b8754d95193aca25755f5, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
@@ -1630,6 +1635,78 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1812645717 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4047990645559215121, guid: 4fe483a7a90dc8d41ac3d8ced845b904, type: 3}
+  m_PrefabInstance: {fileID: 1488139970}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1812645718
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1812645717}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Navigation:
+    m_Mode: 3
+    m_WrapAround: 0
+    m_SelectOnUp: {fileID: 0}
+    m_SelectOnDown: {fileID: 0}
+    m_SelectOnLeft: {fileID: 0}
+    m_SelectOnRight: {fileID: 0}
+  m_Transition: 1
+  m_Colors:
+    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
+    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
+    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_ColorMultiplier: 1
+    m_FadeDuration: 0.1
+  m_SpriteState:
+    m_HighlightedSprite: {fileID: 0}
+    m_PressedSprite: {fileID: 0}
+    m_SelectedSprite: {fileID: 0}
+    m_DisabledSprite: {fileID: 0}
+  m_AnimationTriggers:
+    m_NormalTrigger: Normal
+    m_HighlightedTrigger: Highlighted
+    m_PressedTrigger: Pressed
+    m_SelectedTrigger: Selected
+    m_DisabledTrigger: Disabled
+  m_Interactable: 1
+  m_TargetGraphic: {fileID: 1812645719}
+  m_OnClick:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 276128972}
+        m_TargetAssemblyTypeName: 
+        m_MethodName: 
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &1812645719 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3944156482917709234, guid: 4fe483a7a90dc8d41ac3d8ced845b904, type: 3}
+  m_PrefabInstance: {fileID: 1488139970}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1812645717}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &2141226653
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1790,9 +1867,9 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 6202977915942532672, guid: 8a4754a8875cf4d4ea7fc28213a17692, type: 3}
-      propertyPath: m_Volume
-      value: 0.806
-      objectReference: {fileID: 0}
+    - target: {fileID: 9169572964204784073, guid: 8a4754a8875cf4d4ea7fc28213a17692, type: 3}
+      propertyPath: musicMixer
+      value: 
+      objectReference: {fileID: -906830959870545926, guid: 6a76bc001680ea543a3b9be848167dc8, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8a4754a8875cf4d4ea7fc28213a17692, type: 3}
