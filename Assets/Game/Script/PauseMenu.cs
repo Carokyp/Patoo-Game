@@ -6,6 +6,7 @@ public class PauseMenu : MonoBehaviour
 {
 
     public GameObject pauseMenu;
+    
    
     void Update()
     {
@@ -15,6 +16,7 @@ public class PauseMenu : MonoBehaviour
     public void Pause()
     {
         pauseMenu.SetActive(true);
+        
         Time.timeScale = 0;
     }
 
@@ -22,6 +24,7 @@ public class PauseMenu : MonoBehaviour
     {
 
         pauseMenu.SetActive(false);
+        
         Time.timeScale = 1;
 
     }

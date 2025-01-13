@@ -467,6 +467,7 @@ public class MatchFinder : MonoBehaviour
             roundManager.WinCheck();
             roundManager.shufflePanel.SetActive(false);
             roundManager.endingRound = false;
+            
         }
     }
 
