@@ -290,6 +290,9 @@ MonoBehaviour:
   roundTime: 180
   replayButton: {fileID: 1547500314}
   nextButton: {fileID: 98440947}
+  pauseButton: {fileID: 9018658553299335416}
+  soundButton: {fileID: 9018658553299335415}
+  soundOffButton: {fileID: 9018658553299335414}
   shufflePanel: {fileID: 690136398}
   endingRound: 0
   currentScore: 0
@@ -873,5 +876,20 @@ MonoBehaviour:
 --- !u!1 &9018658553299335413 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3671000943353460190, guid: afa92de8a987d5c47a810338b6e046b7, type: 3}
+  m_PrefabInstance: {fileID: 9018658553299335411}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &9018658553299335414 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 395368641970933845, guid: afa92de8a987d5c47a810338b6e046b7, type: 3}
+  m_PrefabInstance: {fileID: 9018658553299335411}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &9018658553299335415 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8080331884681282379, guid: afa92de8a987d5c47a810338b6e046b7, type: 3}
+  m_PrefabInstance: {fileID: 9018658553299335411}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &9018658553299335416 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 116359355931575484, guid: afa92de8a987d5c47a810338b6e046b7, type: 3}
   m_PrefabInstance: {fileID: 9018658553299335411}
   m_PrefabAsset: {fileID: 0}

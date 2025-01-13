@@ -819,6 +819,21 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 9018658551887627241, guid: afa92de8a987d5c47a810338b6e046b7, type: 3}
   m_PrefabInstance: {fileID: 508091376}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &508091381 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 395368641970933845, guid: afa92de8a987d5c47a810338b6e046b7, type: 3}
+  m_PrefabInstance: {fileID: 508091376}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &508091382 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8080331884681282379, guid: afa92de8a987d5c47a810338b6e046b7, type: 3}
+  m_PrefabInstance: {fileID: 508091376}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &508091383 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 116359355931575484, guid: afa92de8a987d5c47a810338b6e046b7, type: 3}
+  m_PrefabInstance: {fileID: 508091376}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &933249395
 GameObject:
   m_ObjectHideFlags: 0
@@ -905,14 +920,17 @@ MonoBehaviour:
   roundTime: 180
   replayButton: {fileID: 508091380}
   nextButton: {fileID: 508091377}
+  pauseButton: {fileID: 508091383}
+  soundButton: {fileID: 508091382}
+  soundOffButton: {fileID: 508091381}
   shufflePanel: {fileID: 188437507}
   endingRound: 0
   currentScore: 0
   displayScore: 0
   scoreSpeed: 5
-  scoreTarget1: 1000
-  scoreTarget2: 3000
-  scoreTarget3: 5000
+  scoreTarget1: 2000
+  scoreTarget2: 4000
+  scoreTarget3: 6000
   min: 0
   sec: 0
 --- !u!4 &1430911293

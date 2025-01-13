@@ -304,6 +304,9 @@ MonoBehaviour:
   roundTime: 10
   replayButton: {fileID: 1547500314}
   nextButton: {fileID: 98440947}
+  pauseButton: {fileID: 1710398581}
+  soundButton: {fileID: 114847589}
+  soundOffButton: {fileID: 1119683441}
   shufflePanel: {fileID: 690136398}
   endingRound: 0
   currentScore: 0
@@ -586,6 +589,11 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1119683441 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 395368641970933845, guid: afa92de8a987d5c47a810338b6e046b7, type: 3}
+  m_PrefabInstance: {fileID: 9018658553299335411}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1520876888
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -670,6 +678,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7b85c5d388223394b97a628f19ff750e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &1710398581 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 116359355931575484, guid: afa92de8a987d5c47a810338b6e046b7, type: 3}
+  m_PrefabInstance: {fileID: 9018658553299335411}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1924334918 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1441336795498595951, guid: 1f83ee436e58840479040ae5e6cef861, type: 3}

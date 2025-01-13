@@ -290,14 +290,17 @@ MonoBehaviour:
   roundTime: 180
   replayButton: {fileID: 1547500314}
   nextButton: {fileID: 98440947}
+  pauseButton: {fileID: 1467955737}
+  soundButton: {fileID: 1553902505}
+  soundOffButton: {fileID: 575102300}
   shufflePanel: {fileID: 690136398}
   endingRound: 0
   currentScore: 0
   displayScore: 0
   scoreSpeed: 5
-  scoreTarget1: 1000
-  scoreTarget2: 3000
-  scoreTarget3: 5000
+  scoreTarget1: 2000
+  scoreTarget2: 4000
+  scoreTarget3: 6000
   min: 0
   sec: 0
 --- !u!4 &309724714
@@ -400,6 +403,11 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &575102300 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 395368641970933845, guid: afa92de8a987d5c47a810338b6e046b7, type: 3}
+  m_PrefabInstance: {fileID: 9018658553299335411}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &690136398
 GameObject:
   m_ObjectHideFlags: 0
@@ -717,6 +725,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a059266e5f97a064ca379baa5bd907d3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &1467955737 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 116359355931575484, guid: afa92de8a987d5c47a810338b6e046b7, type: 3}
+  m_PrefabInstance: {fileID: 9018658553299335411}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1538175870 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3671000943353460190, guid: afa92de8a987d5c47a810338b6e046b7, type: 3}
@@ -725,6 +738,11 @@ GameObject:
 --- !u!1 &1547500314 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 9018658551887627241, guid: afa92de8a987d5c47a810338b6e046b7, type: 3}
+  m_PrefabInstance: {fileID: 9018658553299335411}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1553902505 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8080331884681282379, guid: afa92de8a987d5c47a810338b6e046b7, type: 3}
   m_PrefabInstance: {fileID: 9018658553299335411}
   m_PrefabAsset: {fileID: 0}
 --- !u!4 &1924334918 stripped
@@ -796,10 +814,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 395368641970933845, guid: afa92de8a987d5c47a810338b6e046b7, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 1449072606532661230, guid: afa92de8a987d5c47a810338b6e046b7, type: 3}
       propertyPath: m_RootOrder
       value: 7

@@ -13,6 +13,9 @@ public class RoundManager : MonoBehaviour
 
     public GameObject replayButton;
     public GameObject nextButton;
+    public GameObject pauseButton;
+    public GameObject soundButton;
+    public GameObject soundOffButton;
     public GameObject shufflePanel;
 
     public bool endingRound = false;
@@ -85,6 +88,10 @@ public class RoundManager : MonoBehaviour
 
         uiMan.roundOverScreen.SetActive(true);
 
+        pauseButton.SetActive(false);
+        soundButton.SetActive(false);
+        soundOffButton.SetActive(false);
+
         uiMan.winScore.text = currentScore.ToString();
 
         
@@ -116,6 +123,7 @@ public class RoundManager : MonoBehaviour
             uiMan.winDog2.SetActive(true);
 
             nextButton.SetActive(true);
+
             SFXManager.instance.PlayWinSound();
             
 
@@ -132,6 +140,7 @@ public class RoundManager : MonoBehaviour
         {
             uiMan.winStar1.SetActive(true);
             uiMan.winDog1.SetActive(true);
+
 
             nextButton.SetActive(true);
 
@@ -153,6 +162,9 @@ public class RoundManager : MonoBehaviour
         {
             uiMan.winStar0.SetActive(true);
             uiMan.winDog0.SetActive(true);
+            pauseButton.SetActive(false);
+            soundButton.SetActive(false);
+            soundOffButton.SetActive(false);
 
             replayButton.SetActive(true);
 
