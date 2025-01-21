@@ -76,7 +76,12 @@ public class RoundManager : MonoBehaviour
             endingRound = false;
         }
 
-        uiMan.timeText.text = string.Format("{0:0} : {1:0} s", min, sec);
+        if (roundTime > 0)
+        {
+            uiMan.timeText.text = string.Format("{0:0} : {1:0} s", min, sec);
+        }
+
+      
 
         displayScore = Mathf.Lerp(displayScore, currentScore, scoreSpeed * Time.deltaTime);
         uiMan.scoreText.text = displayScore.ToString("0");

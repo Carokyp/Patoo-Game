@@ -928,9 +928,9 @@ MonoBehaviour:
   currentScore: 0
   displayScore: 0
   scoreSpeed: 5
-  scoreTarget1: 2000
-  scoreTarget2: 4000
-  scoreTarget3: 6000
+  scoreTarget1: 5000
+  scoreTarget2: 6000
+  scoreTarget3: 8000
   min: 0
   sec: 0
 --- !u!4 &1430911293

@@ -32,10 +32,10 @@ public class Board : MonoBehaviour
 
     private float bonusMulti;
     public float bonusAmount = .5f;
+    
 
     private BoardLayout boardLayout;
     private Leaf[,] layoutStore;
-
 
 
 
@@ -46,6 +46,7 @@ public class Board : MonoBehaviour
         matchFind = FindObjectOfType<MatchFinder>();
         roundMan = FindObjectOfType<RoundManager>();
         boardLayout = GetComponent<BoardLayout>();
+        
     }
 
     void Start()
@@ -91,7 +92,7 @@ public class Board : MonoBehaviour
 
                 if (layoutStore[x, y] != null)
                 {
-                    SpawnLeaf(new Vector2Int(x, y), layoutStore[x, y]);
+                    NoSpawnLeaf(new Vector2Int(x, y), layoutStore[x, y]);
                 }
                 else
                 {
@@ -121,6 +122,20 @@ public class Board : MonoBehaviour
             leafToSpawn = spider;
            
         }
+
+
+        Leaf leaf = Instantiate(leafToSpawn, new Vector3(pos.x, pos.y + height, 0f), Quaternion.identity);
+        leaf.transform.parent = transform;
+        leaf.name = "Leaf - " + pos.x + " , " + pos.y;
+        allLeafs[pos.x, pos.y] = leaf;
+
+        leaf.SetupLeaf(pos, this);
+    }
+
+    private void NoSpawnLeaf(Vector2Int pos, Leaf leafToSpawn)
+    {
+
+
 
         Leaf leaf = Instantiate(leafToSpawn, new Vector3(pos.x, pos.y + height, 0f), Quaternion.identity);
         leaf.transform.parent = transform;
@@ -231,26 +246,40 @@ public class Board : MonoBehaviour
         int nullCounter = 0;
         int wood = 0;
         int spaceBeforeWood = 0;
+        int collum = 0;
 
         for (int x = 0; x < width; x++)
         {
+            if (collum != x)
+            {
+                 nullCounter = 0;
+                 wood = 0;
+                 spaceBeforeWood = 0;
+                 collum = x;
+            }
             for (int y = 0; y < height; y++)
             {
                 if (allLeafs[x, y] == null)
                 {
-                    nullCounter++;
+                    nullCounter++; 
+                    
                 }
                 else if (nullCounter > 0)
+
                 {
                     if (allLeafs[x, y].type != Leaf.LeafType.woodBlock)
                     {
+                      
                         allLeafs[x, y].posIndex.y -= nullCounter;
                         allLeafs[x, y - nullCounter] = allLeafs[x, y];
 
                         allLeafs[x, y] = null;
 
+                       
+
                         if (wood > 0)
                         {
+                            
                             if (spaceBeforeWood > 1 )
                             {
                                 spaceBeforeWood--;

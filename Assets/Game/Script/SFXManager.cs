@@ -56,9 +56,16 @@ public class SFXManager : MonoBehaviour
     }
 
     public void StopMusic() 
-    { 
-     
-  
+    {
+
+        musicMixer.SetFloat("Music Volume",-80);
     
+    }
+
+    public void PlayMusic()
+    {
+
+        musicMixer.SetFloat("Music Volume", -20);
+
     }
 }

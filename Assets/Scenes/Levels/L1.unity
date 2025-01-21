@@ -133,6 +133,17 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 395368641970933845, guid: afa92de8a987d5c47a810338b6e046b7, type: 3}
   m_PrefabInstance: {fileID: 9018658553299335411}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &122554162 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 9169572964204784073, guid: 8a4754a8875cf4d4ea7fc28213a17692, type: 3}
+  m_PrefabInstance: {fileID: 871337079}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d422818012efcef41b2fe29d194b4032, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &305702084
 GameObject:
   m_ObjectHideFlags: 0
@@ -241,9 +252,9 @@ MonoBehaviour:
   currentScore: 0
   displayScore: 0
   scoreSpeed: 5
-  scoreTarget1: 1000
-  scoreTarget2: 3000
-  scoreTarget3: 5000
+  scoreTarget1: 5000
+  scoreTarget2: 6000
+  scoreTarget3: 8000
   min: 0
   sec: 0
 --- !u!4 &309724714
@@ -537,6 +548,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 9169572964204784073, guid: 8a4754a8875cf4d4ea7fc28213a17692, type: 3}
+      propertyPath: musicMixer
+      value: 
+      objectReference: {fileID: 24100000, guid: 6a76bc001680ea543a3b9be848167dc8, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8a4754a8875cf4d4ea7fc28213a17692, type: 3}
 --- !u!1 &1047767095
@@ -938,10 +953,18 @@ PrefabInstance:
       propertyPath: m_fontColor32.rgba
       value: 4294967295
       objectReference: {fileID: 0}
+    - target: {fileID: 7264467695907083926, guid: afa92de8a987d5c47a810338b6e046b7, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 122554162}
     - target: {fileID: 7317354066664318210, guid: afa92de8a987d5c47a810338b6e046b7, type: 3}
       propertyPath: m_RootOrder
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7641667406790989850, guid: afa92de8a987d5c47a810338b6e046b7, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 122554162}
     - target: {fileID: 8128426328900324101, guid: afa92de8a987d5c47a810338b6e046b7, type: 3}
       propertyPath: m_SizeDelta.x
       value: 699.391

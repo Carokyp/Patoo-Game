@@ -408,6 +408,7 @@ GameObject:
   m_Component:
   - component: {fileID: 690136400}
   - component: {fileID: 690136399}
+  - component: {fileID: 690136401}
   m_Layer: 0
   m_Name: Board
   m_TagString: Untagged
@@ -440,7 +441,7 @@ MonoBehaviour:
   matchFind: {fileID: 0}
   currentState: 1
   spider: {fileID: 6781709933695143702, guid: 8a085c3f1028ddb439f6e40682fc55cb, type: 3}
-  spiderChance: 2
+  spiderChance: 1
   roundMan: {fileID: 0}
   bonusAmount: 0.5
 --- !u!4 &690136400
@@ -459,6 +460,75 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &690136401
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 690136398}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 980fc92f21e3e3c4f945fa3ae0516d70, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  allRows:
+  - leafsInRow:
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+  - leafsInRow:
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+  - leafsInRow:
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+  - leafsInRow:
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+  - leafsInRow:
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+  - leafsInRow:
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+  - leafsInRow:
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
 --- !u!1 &1047767095
 GameObject:
   m_ObjectHideFlags: 0
@@ -647,11 +717,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 1965628026796359674, guid: ea15f6a9ebdf5204a9e978e7f695e350, type: 3}
   m_PrefabInstance: {fileID: 1940049558}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &2104200240 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 9018658552747438325, guid: afa92de8a987d5c47a810338b6e046b7, type: 3}
-  m_PrefabInstance: {fileID: 9018658553299335411}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1441336794734379817
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -727,7 +792,7 @@ PrefabInstance:
     - target: {fileID: 3019837172504304203, guid: afa92de8a987d5c47a810338b6e046b7, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 9018658553299335418}
+      objectReference: {fileID: 0}
     - target: {fileID: 3019837172504304203, guid: afa92de8a987d5c47a810338b6e046b7, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: GoToMainMenu
@@ -899,7 +964,7 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 9018658553299335414, guid: afa92de8a987d5c47a810338b6e046b7, type: 3}
   m_PrefabInstance: {fileID: 9018658553299335411}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2104200240}
+  m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 97382b94d52025746b799c71e403de5a, type: 3}
@@ -925,16 +990,3 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 116359355931575484, guid: afa92de8a987d5c47a810338b6e046b7, type: 3}
   m_PrefabInstance: {fileID: 9018658553299335411}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &9018658553299335418
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2104200240}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1fca4a3130a953742953587512d45e48, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  mainMenu: Main Menu
