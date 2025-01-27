@@ -549,9 +549,17 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9169572964204784073, guid: 8a4754a8875cf4d4ea7fc28213a17692, type: 3}
-      propertyPath: musicMixer
+      propertyPath: musicOnButton
       value: 
-      objectReference: {fileID: 24100000, guid: 6a76bc001680ea543a3b9be848167dc8, type: 2}
+      objectReference: {fileID: 1337944278}
+    - target: {fileID: 9169572964204784073, guid: 8a4754a8875cf4d4ea7fc28213a17692, type: 3}
+      propertyPath: isPlayingMusic
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9169572964204784073, guid: 8a4754a8875cf4d4ea7fc28213a17692, type: 3}
+      propertyPath: musicOffButton
+      value: 
+      objectReference: {fileID: 115226022}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8a4754a8875cf4d4ea7fc28213a17692, type: 3}
 --- !u!1 &1047767095

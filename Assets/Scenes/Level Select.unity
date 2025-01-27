@@ -1145,6 +1145,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SFX Manager
       objectReference: {fileID: 0}
+    - target: {fileID: 1787787547154929644, guid: 8a4754a8875cf4d4ea7fc28213a17692, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1787787547154929647, guid: 8a4754a8875cf4d4ea7fc28213a17692, type: 3}
       propertyPath: m_RootOrder
       value: 3

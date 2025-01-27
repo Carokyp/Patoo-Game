@@ -19,7 +19,7 @@ public class MatchFinder : MonoBehaviour
     public int availableMatches = 0;
     bool firstMatch = false;
     public bool woodLevel = false;
-    private int shuffleCounter = 0;
+    public int shuffleCounter = 0;
     private RoundManager roundManager;
     
 
@@ -463,21 +463,7 @@ public class MatchFinder : MonoBehaviour
         CheckForSpiders();
         firstMatch = true;
 
-       if (woodLevel == true && availableMatches <= 0)
-       {
-            if (shuffleCounter < 1)
-            {
-                shuffleCounter++;
-            }
-            else
-            {
-                roundManager.WinCheck();
-                roundManager.shufflePanel.SetActive(false);
-                roundManager.endingRound = false;
-            }
-
-            
-       }
+       
     }
 
     

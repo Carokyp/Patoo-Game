@@ -344,7 +344,28 @@ public class Board : MonoBehaviour
             if (matchFind.availableMatches <= 0)
             {
              Debug.Log("callingShuffle");
-             StartCoroutine(matchFind.NoMatch());             
+
+                if (matchFind.woodLevel == true)
+                {
+                    if (matchFind.shuffleCounter < 1)
+                    {
+                        matchFind.shuffleCounter++;
+                        StartCoroutine(matchFind.NoMatch());
+                    }
+                    else
+                    {
+                        roundMan.WinCheck();
+                        roundMan.shufflePanel.SetActive(false);
+                        roundMan.endingRound = false;
+                    }
+
+
+                }
+                else
+                {
+                    StartCoroutine(matchFind.NoMatch());
+                }
+        
             }
 
         }

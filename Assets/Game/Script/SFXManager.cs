@@ -7,11 +7,23 @@ public class SFXManager : MonoBehaviour
 {
     public static SFXManager instance;
     public AudioMixer musicMixer;
-   
+    public bool musicOn;
+    static bool isPlayingMusic = true;
+    public GameObject musicOnButton, musicOffButton;
+ 
+
+
     private void Awake()
     {
         instance = this;
         
+
+        
+    }
+
+    private void Start()
+    {
+        SetMusic();
     }
 
     public AudioSource leafSound, spiderSound, winSound, loseSound, gameSound;
@@ -59,6 +71,7 @@ public class SFXManager : MonoBehaviour
     {
 
         musicMixer.SetFloat("Music Volume",-80);
+        isPlayingMusic = false;
     
     }
 
@@ -66,6 +79,24 @@ public class SFXManager : MonoBehaviour
     {
 
         musicMixer.SetFloat("Music Volume", -20);
+        isPlayingMusic = true;
+    }
+
+    public void SetMusic() 
+    {
+        musicOn = isPlayingMusic;
+        if (isPlayingMusic == true)
+        {
+            musicOnButton.SetActive(true);
+            musicOffButton.SetActive(false);
+            PlayMusic();
+        }
+        else
+        {
+            musicOnButton.SetActive(false);
+            musicOffButton.SetActive(true);
+            StopMusic();
+        }
 
     }
 }
