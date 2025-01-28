@@ -225,7 +225,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: be315dc64c3634442b9666b8d913f713, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  roundTime: 10
+  roundTime: 180
   replayButton: {fileID: 1547500314}
   nextButton: {fileID: 98440947}
   pauseButton: {fileID: 9018658553299335416}
@@ -573,6 +573,7 @@ MonoBehaviour:
   canShuffle: 1
   availableMatches: 0
   woodLevel: 0
+  shuffleCounter: 0
 --- !u!4 &1047767097
 Transform:
   m_ObjectHideFlags: 0

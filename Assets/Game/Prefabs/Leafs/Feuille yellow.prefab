@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: -2666855759042507733}
   - component: {fileID: 5585937263135486077}
   m_Layer: 0
-  m_Name: Feuille jaune
+  m_Name: Feuille yellow
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
