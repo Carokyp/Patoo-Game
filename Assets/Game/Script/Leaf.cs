@@ -26,7 +26,7 @@ public class Leaf : MonoBehaviour
 
     public GameObject destroyEffect;
 
-    public int blastSize = 2;
+    public int blastSize = 1;
 
     public int scoreValue;
 
