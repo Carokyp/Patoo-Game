@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 6781709933695143702}
   - component: {fileID: 4282959106297984805}
   m_Layer: 0
-  m_Name: Spider
+  m_Name: Spider Damage = -200
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

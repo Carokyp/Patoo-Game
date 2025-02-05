@@ -298,9 +298,9 @@ MonoBehaviour:
   currentScore: 0
   displayScore: 0
   scoreSpeed: 5
-  scoreTarget1: 5000
-  scoreTarget2: 6000
-  scoreTarget3: 8000
+  scoreTarget1: 7000
+  scoreTarget2: 9000
+  scoreTarget3: 12000
   min: 0
   sec: 0
 --- !u!4 &309724714
@@ -451,7 +451,7 @@ MonoBehaviour:
   matchFind: {fileID: 0}
   currentState: 1
   spider: {fileID: 6781709933695143702, guid: 8a085c3f1028ddb439f6e40682fc55cb, type: 3}
-  spiderChance: 0.5
+  spiderChance: 3
   roundMan: {fileID: 0}
   bonusAmount: 0.5
 --- !u!4 &690136400
@@ -646,6 +646,7 @@ MonoBehaviour:
   canShuffle: 1
   availableMatches: 0
   woodLevel: 0
+  shuffleCounter: 0
 --- !u!4 &1047767097
 Transform:
   m_ObjectHideFlags: 0

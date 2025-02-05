@@ -298,9 +298,9 @@ MonoBehaviour:
   currentScore: 0
   displayScore: 0
   scoreSpeed: 5
-  scoreTarget1: 5000
-  scoreTarget2: 6000
-  scoreTarget3: 8000
+  scoreTarget1: 7000
+  scoreTarget2: 9000
+  scoreTarget3: 12000
   min: 0
   sec: 0
 --- !u!4 &309724714
@@ -446,9 +446,9 @@ MonoBehaviour:
   matchFind: {fileID: 0}
   currentState: 1
   spider: {fileID: 6781709933695143702, guid: 8a085c3f1028ddb439f6e40682fc55cb, type: 3}
-  spiderChance: 1
+  spiderChance: 3
   roundMan: {fileID: 0}
-  bonusAmount: 0.5
+  bonusAmount: 0.75
 --- !u!4 &690136400
 Transform:
   m_ObjectHideFlags: 0
@@ -505,9 +505,9 @@ MonoBehaviour:
   - leafsInRow:
     - {fileID: -8365905124348521372, guid: 597909c07e6a55b4a8dd5398fcaf1837, type: 3}
     - {fileID: -8365905124348521372, guid: 597909c07e6a55b4a8dd5398fcaf1837, type: 3}
-    - {fileID: -3305818568112437277, guid: 20b7c1ed020c62b4f8dd070bfc5a33b3, type: 3}
-    - {fileID: -3305818568112437277, guid: 20b7c1ed020c62b4f8dd070bfc5a33b3, type: 3}
-    - {fileID: -3305818568112437277, guid: 20b7c1ed020c62b4f8dd070bfc5a33b3, type: 3}
+    - {fileID: -8365905124348521372, guid: ea065b1571928a1459898307f82c91af, type: 3}
+    - {fileID: -8365905124348521372, guid: ea065b1571928a1459898307f82c91af, type: 3}
+    - {fileID: -8365905124348521372, guid: ea065b1571928a1459898307f82c91af, type: 3}
     - {fileID: 7568174617729065683, guid: a482e78d42239d44392380a0e2c51d80, type: 3}
     - {fileID: 7568174617729065683, guid: a482e78d42239d44392380a0e2c51d80, type: 3}
   - leafsInRow:
@@ -573,6 +573,7 @@ MonoBehaviour:
   canShuffle: 1
   availableMatches: 0
   woodLevel: 0
+  shuffleCounter: 0
 --- !u!4 &1047767097
 Transform:
   m_ObjectHideFlags: 0

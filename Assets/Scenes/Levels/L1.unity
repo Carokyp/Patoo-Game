@@ -252,9 +252,9 @@ MonoBehaviour:
   currentScore: 0
   displayScore: 0
   scoreSpeed: 5
-  scoreTarget1: 5000
-  scoreTarget2: 6000
-  scoreTarget3: 8000
+  scoreTarget1: 7000
+  scoreTarget2: 9000
+  scoreTarget3: 12000
   min: 0
   sec: 0
 --- !u!4 &309724714
@@ -408,7 +408,7 @@ MonoBehaviour:
   spider: {fileID: 6781709933695143702, guid: 8a085c3f1028ddb439f6e40682fc55cb, type: 3}
   spiderChance: 0
   roundMan: {fileID: 0}
-  bonusAmount: 0.5
+  bonusAmount: 0.75
 --- !u!4 &690136400
 Transform:
   m_ObjectHideFlags: 0
@@ -465,7 +465,7 @@ MonoBehaviour:
     - {fileID: -2666855759042507733, guid: f26286919c1611949b2c3ea4f464de7a, type: 3}
     - {fileID: -2666855759042507733, guid: f26286919c1611949b2c3ea4f464de7a, type: 3}
     - {fileID: -2666855759042507733, guid: f26286919c1611949b2c3ea4f464de7a, type: 3}
-    - {fileID: -8365905124348521372, guid: 597909c07e6a55b4a8dd5398fcaf1837, type: 3}
+    - {fileID: -8365905124348521372, guid: ea065b1571928a1459898307f82c91af, type: 3}
     - {fileID: -2666855759042507733, guid: f26286919c1611949b2c3ea4f464de7a, type: 3}
     - {fileID: -2666855759042507733, guid: f26286919c1611949b2c3ea4f464de7a, type: 3}
     - {fileID: -2666855759042507733, guid: f26286919c1611949b2c3ea4f464de7a, type: 3}
@@ -601,6 +601,7 @@ MonoBehaviour:
   canShuffle: 1
   availableMatches: 0
   woodLevel: 0
+  shuffleCounter: 0
 --- !u!4 &1047767097
 Transform:
   m_ObjectHideFlags: 0
@@ -1175,7 +1176,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9018658553225088184, guid: afa92de8a987d5c47a810338b6e046b7, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 0.0053558
+      value: 0.0053100586
       objectReference: {fileID: 0}
     - target: {fileID: 9018658553248427172, guid: afa92de8a987d5c47a810338b6e046b7, type: 3}
       propertyPath: m_RootOrder

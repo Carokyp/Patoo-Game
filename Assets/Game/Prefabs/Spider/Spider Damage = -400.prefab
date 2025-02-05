@@ -57,11 +57,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6781709933695143702, guid: 8a085c3f1028ddb439f6e40682fc55cb, type: 3}
       propertyPath: scoreValue
-      value: -300
+      value: -400
       objectReference: {fileID: 0}
     - target: {fileID: 8739319932727048286, guid: 8a085c3f1028ddb439f6e40682fc55cb, type: 3}
       propertyPath: m_Name
-      value: Spider Damage = 2
+      value: Spider Damage = -400
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8a085c3f1028ddb439f6e40682fc55cb, type: 3}
