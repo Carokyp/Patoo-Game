@@ -225,7 +225,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: be315dc64c3634442b9666b8d913f713, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  roundTime: 180
+  roundTime: 200
   replayButton: {fileID: 1547500314}
   nextButton: {fileID: 98440947}
   pauseButton: {fileID: 9018658553299335416}
@@ -236,9 +236,9 @@ MonoBehaviour:
   currentScore: 0
   displayScore: 0
   scoreSpeed: 5
-  scoreTarget1: 100
-  scoreTarget2: 300
-  scoreTarget3: 500
+  scoreTarget1: 8000
+  scoreTarget2: 10000
+  scoreTarget3: 12000
   min: 0
   sec: 0
 --- !u!4 &309724714
@@ -445,10 +445,10 @@ MonoBehaviour:
   leafSpeed: 7
   matchFind: {fileID: 0}
   currentState: 1
-  spider: {fileID: 6781709933695143702, guid: 8a085c3f1028ddb439f6e40682fc55cb, type: 3}
-  spiderChance: 2
+  spider: {fileID: 2800915970593423147, guid: 9d63ad74cd61c4b609f1854016fd6d03, type: 3}
+  spiderChance: 1
   roundMan: {fileID: 0}
-  bonusAmount: 0.5
+  bonusAmount: 1
 --- !u!4 &690136400
 Transform:
   m_ObjectHideFlags: 0
