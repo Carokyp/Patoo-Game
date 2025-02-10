@@ -20,14 +20,16 @@ public class MatchFinder : MonoBehaviour
     bool firstMatch = false;
     public bool woodLevel = false;
     public int shuffleCounter = 0;
-    private RoundManager roundManager;
+    
+
+    
     
 
     private void Awake()
     {
         board = FindObjectOfType<Board>();
         uiMan = FindObjectOfType<UIManager>();
-        roundManager = FindObjectOfType<RoundManager>();
+        
 
     }
 
@@ -49,7 +51,7 @@ public class MatchFinder : MonoBehaviour
             {
                 Leaf currentLeaf = board.allLeafs[x, y];
 
-                if (currentLeaf != null && currentLeaf.type != Leaf.LeafType.woodBlock)
+                if (currentLeaf != null && !IsWoodblock(currentLeaf.type))
                 {
                     if (x > 0 && x < board.width - 1)
                     {
@@ -101,10 +103,16 @@ public class MatchFinder : MonoBehaviour
                                     currentMatches.Add(leftLeaf);
                                     currentMatches.Add(rightLeaf);
 
+                                #region CrackingWood
 
+                                CheckWood(currentLeaf);
+                                CheckWood(leftLeaf);
+                                CheckWood(rightLeaf);
+
+                                #endregion
 
                             }
-                            else if (currentLeaf.type != Leaf.LeafType.spider && currentLeaf.type != Leaf.LeafType.woodBlock)
+                            else if (currentLeaf.type != Leaf.LeafType.spider && !IsWoodblock(currentLeaf.type))
                             {
                                 
                                 #region checkLeftSide
@@ -113,7 +121,7 @@ public class MatchFinder : MonoBehaviour
                                 {
                                   
 
-                                    if (leftLeaf.type != Leaf.LeafType.woodBlock)
+                                    if (!IsWoodblock(leftLeaf.type))
                                     {
                                         // check side matches
                                         if (currentLeaf.posIndex.x > 1)
@@ -163,7 +171,7 @@ public class MatchFinder : MonoBehaviour
                                 
                                 if (leftLeaf.type == currentLeaf.type)
                                 {
-                                    if (rightLeaf.type != Leaf.LeafType.woodBlock)
+                                    if (!IsWoodblock(rightLeaf.type))
                                     {
                                         // check side matches
                                         if (currentLeaf.posIndex.x < board.width - 2)
@@ -212,7 +220,7 @@ public class MatchFinder : MonoBehaviour
                                 #region checkMiddleMatch
                                 if (currentLeaf.posIndex.y < board.height - 1 )
                                 {
-                                    if (board.allLeafs[x, y +1].type != Leaf.LeafType.woodBlock)
+                                    if (!IsWoodblock(board.allLeafs[x, y + 1].type))
                                     {
                                         Leaf diagonalRightLeaf = board.allLeafs[x + 1, y + 1];
                                         Leaf diagonalLeftLeaf = board.allLeafs[x - 1, y + 1];
@@ -227,7 +235,7 @@ public class MatchFinder : MonoBehaviour
 
                                 if (currentLeaf.posIndex.y > 0)
                                 {
-                                    if (board.allLeafs[x, y - 1].type != Leaf.LeafType.woodBlock)
+                                    if (!IsWoodblock(board.allLeafs[x, y - 1].type))
                                     {
                                         Leaf diagonalRightLeaf = board.allLeafs[x + 1, y - 1];
                                         Leaf diagonalLeftLeaf = board.allLeafs[x - 1, y - 1];
@@ -296,9 +304,16 @@ public class MatchFinder : MonoBehaviour
                                 currentMatches.Add(aboveLeaf);
                                 currentMatches.Add(belowLeaf);
 
+                                #region CrackingWood
+
+                                CheckWood(currentLeaf);
+                                CheckWood(aboveLeaf);
+                                CheckWood(belowLeaf);
+
+                                #endregion
                             }
 
-                            else if (currentLeaf.type != Leaf.LeafType.spider && currentLeaf.type != Leaf.LeafType.woodBlock)
+                            else if (currentLeaf.type != Leaf.LeafType.spider && !IsWoodblock(currentLeaf.type))
                             {
 
                                 #region checkBelow
@@ -307,7 +322,7 @@ public class MatchFinder : MonoBehaviour
                                 {
 
 
-                                    if (belowLeaf.type != Leaf.LeafType.woodBlock)
+                                    if (!IsWoodblock(belowLeaf.type))
                                     {
                                         // check side matches
                                         if (currentLeaf.posIndex.y > 1)
@@ -357,7 +372,7 @@ public class MatchFinder : MonoBehaviour
 
                                 if (belowLeaf.type == currentLeaf.type)
                                 {
-                                    if (aboveLeaf.type != Leaf.LeafType.woodBlock)
+                                    if (!IsWoodblock(aboveLeaf.type))
                                     {
                                         // check side matches
                                         if (currentLeaf.posIndex.y < board.height - 2)
@@ -406,7 +421,7 @@ public class MatchFinder : MonoBehaviour
                                 #region checkMiddleMatch
                                 if (currentLeaf.posIndex.x < board.width - 1)
                                 {
-                                    if (board.allLeafs[x , y - 1].type != Leaf.LeafType.woodBlock)
+                                    if (!IsWoodblock(board.allLeafs[x, y - 1].type))
                                     {
                                         Leaf diagonalAboveLeaf = board.allLeafs[x + 1, y + 1];
                                         Leaf diagonalBelowLeaf = board.allLeafs[x + 1, y - 1];
@@ -421,7 +436,7 @@ public class MatchFinder : MonoBehaviour
 
                                if (currentLeaf.posIndex.x > 0)
                                 {
-                                    if (board.allLeafs[x - 1, y].type != Leaf.LeafType.woodBlock)
+                                    if (!IsWoodblock(board.allLeafs[x - 1, y].type))
                                     {
                                         Leaf diagonalAboveLeaf = board.allLeafs[x - 1, y + 1];
                                         Leaf diagonalBelowLeaf = board.allLeafs[x - 1, y - 1];
@@ -533,7 +548,7 @@ public class MatchFinder : MonoBehaviour
             {
                 if (x >= 0 && x < board.width && y >= 0 && y < board.height)
                 {
-                    if (board.allLeafs[x, y] != null && board.allLeafs[x, y].type != Leaf.LeafType.woodBlock)
+                    if (board.allLeafs[x, y] != null && !IsWoodblock(board.allLeafs[x, y].type))
                     {
                         board.allLeafs[x, y].isMatched = true;
                         currentMatches.Add(board.allLeafs[x, y]);
@@ -592,6 +607,78 @@ public class MatchFinder : MonoBehaviour
          FindAllMatches();
          board.DestroyMatches();
 
+    }
+
+    public bool IsWoodblock(Leaf.LeafType leaf) 
+    {
+        if (leaf == Leaf.LeafType.woodBlock || leaf == Leaf.LeafType.woodBlockCrack1 || leaf == Leaf.LeafType.woodBlockCrack2)
+        {
+            return true;
+        }
+
+        return false;
+        
+    }
+
+    void CrackWood(Leaf leaf)
+    {
+        if (leaf.type == Leaf.LeafType.woodBlock)
+        {
+            leaf.gameObject.GetComponent<SpriteRenderer>().color = Color.yellow;
+            leaf.type = Leaf.LeafType.woodBlockCrack1;
+        }
+        else if (leaf.type == Leaf.LeafType.woodBlockCrack1)
+        {
+            leaf.gameObject.GetComponent<SpriteRenderer>().color = Color.red;
+            leaf.type = Leaf.LeafType.woodBlockCrack2;
+        }
+        else if (leaf.type == Leaf.LeafType.woodBlockCrack2) 
+        {
+            leaf.isMatched = true;
+            currentMatches.Add(leaf);
+            
+        }
+
+
+    }
+
+    void CheckWood(Leaf leaf)
+    {
+
+        int x = leaf.posIndex.x;
+        int y = leaf.posIndex.y;
+        // Left
+        if (leaf.posIndex.x > 0)
+        {
+            if (IsWoodblock(board.allLeafs[x -1, y].type))
+            {
+                CrackWood(board.allLeafs[x -1, y]);
+            }
+        }
+        // Right
+        if (leaf.posIndex.x < board.width -1)
+        {
+            if (IsWoodblock(board.allLeafs[x + 1, y].type))
+            {
+                CrackWood(board.allLeafs[x + 1, y]);
+            }
+        }
+        // Below
+        if (leaf.posIndex.y > 0)
+        {
+            if (IsWoodblock(board.allLeafs[x, y -1].type))
+            {
+                CrackWood(board.allLeafs[x, y -1]);
+            }
+        }
+        // Above
+        if (leaf.posIndex.y < board.height - 1)
+        {
+            if (IsWoodblock(board.allLeafs[x, y +1].type))
+            {
+                CrackWood(board.allLeafs[x, y +1]);
+            }
+        }
     }
 
 

@@ -17,7 +17,7 @@ public class Leaf : MonoBehaviour
 
     private Leaf otherLeaf;
 
-    public enum LeafType {green, yellow, red, brown, pink, spider, woodBlock}
+    public enum LeafType {green, yellow, red, brown, pink, spider, woodBlock, woodBlockCrack1, woodBlockCrack2}
     public LeafType type;
 
     public bool isMatched;
@@ -30,8 +30,14 @@ public class Leaf : MonoBehaviour
 
     public int scoreValue;
 
-  
-  
+    public MatchFinder matchFind;
+
+
+    private void Awake()
+    {
+        matchFind = FindObjectOfType<MatchFinder>();    
+    }
+
 
     void Start()
     {
@@ -93,7 +99,7 @@ public class Leaf : MonoBehaviour
         {
 
 
-            if (board.allLeafs[posIndex.x, posIndex.y].type != LeafType.woodBlock)
+            if (!matchFind.IsWoodblock(board.allLeafs[posIndex.x, posIndex.y].type))
             {
                 MovePieces();
             }
@@ -111,7 +117,7 @@ public class Leaf : MonoBehaviour
         if (swipeAngle < 45 && swipeAngle > -45 && posIndex.x < board.width - 1)
         {
             otherLeaf = board.allLeafs[posIndex.x + 1, posIndex.y];
-            if (otherLeaf.type != LeafType.woodBlock)
+            if (!matchFind.IsWoodblock(otherLeaf.type))
             {
                 otherLeaf.posIndex.x--;
                 posIndex.x++;
@@ -124,7 +130,7 @@ public class Leaf : MonoBehaviour
         {
             otherLeaf = board.allLeafs[posIndex.x, posIndex.y + 1]; 
             
-            if (otherLeaf.type != LeafType.woodBlock)
+            if (!matchFind.IsWoodblock(otherLeaf.type))
             {
                 otherLeaf.posIndex.y--;
                 posIndex.y++;
@@ -137,7 +143,7 @@ public class Leaf : MonoBehaviour
         {
             otherLeaf = board.allLeafs[posIndex.x, posIndex.y - 1];
             
-            if (otherLeaf.type != LeafType.woodBlock)
+            if (!matchFind.IsWoodblock(otherLeaf.type))
             {
                 otherLeaf.posIndex.y++;
                 posIndex.y--;
@@ -149,7 +155,7 @@ public class Leaf : MonoBehaviour
         {
             otherLeaf = board.allLeafs[posIndex.x - 1, posIndex.y];
             
-            if (otherLeaf.type != LeafType.woodBlock)
+            if (!matchFind.IsWoodblock(otherLeaf.type))
             {
                 otherLeaf.posIndex.x++;
                 posIndex.x--;

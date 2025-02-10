@@ -197,7 +197,7 @@ public class Board : MonoBehaviour
 
         if (allLeafs[pos.x, pos.y] != null)
         {
-            if (allLeafs[pos.x, pos.y].type != Leaf.LeafType.woodBlock)
+            if (!matchFind.IsWoodblock(allLeafs[pos.x, pos.y].type))
             {
 
             
@@ -267,7 +267,7 @@ public class Board : MonoBehaviour
                 else if (nullCounter > 0)
 
                 {
-                    if (allLeafs[x, y].type != Leaf.LeafType.woodBlock)
+                    if (!matchFind.IsWoodblock(allLeafs[x, y].type))
                     {
                       
                         allLeafs[x, y].posIndex.y -= nullCounter;
@@ -292,7 +292,7 @@ public class Board : MonoBehaviour
                         }
 
                     }
-                    else if (allLeafs[x,y].type == Leaf.LeafType.woodBlock)
+                    else if (matchFind.IsWoodblock(allLeafs[x, y].type))
                     {
 
                         nullCounter++;
