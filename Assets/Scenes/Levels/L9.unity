@@ -424,6 +424,7 @@ MonoBehaviour:
     - {fileID: 6781709933695143702, guid: 8a085c3f1028ddb439f6e40682fc55cb, type: 3}
     - {fileID: 366340948363469684, guid: 16e76260f0f5b6d48b1057fbc6c223ea, type: 3}
     - {fileID: -8365905124348521372, guid: 597909c07e6a55b4a8dd5398fcaf1837, type: 3}
+    leafToFreeze: 
   - leafsInRow:
     - {fileID: 7568174617729065683, guid: a482e78d42239d44392380a0e2c51d80, type: 3}
     - {fileID: -2666855759042507733, guid: f26286919c1611949b2c3ea4f464de7a, type: 3}
@@ -432,6 +433,7 @@ MonoBehaviour:
     - {fileID: -3305818568112437277, guid: 20b7c1ed020c62b4f8dd070bfc5a33b3, type: 3}
     - {fileID: -2666855759042507733, guid: f26286919c1611949b2c3ea4f464de7a, type: 3}
     - {fileID: -8365905124348521372, guid: 597909c07e6a55b4a8dd5398fcaf1837, type: 3}
+    leafToFreeze: 
   - leafsInRow:
     - {fileID: -8365905124348521372, guid: 597909c07e6a55b4a8dd5398fcaf1837, type: 3}
     - {fileID: 7568174617729065683, guid: a482e78d42239d44392380a0e2c51d80, type: 3}
@@ -440,6 +442,7 @@ MonoBehaviour:
     - {fileID: -3305818568112437277, guid: 20b7c1ed020c62b4f8dd070bfc5a33b3, type: 3}
     - {fileID: 7568174617729065683, guid: a482e78d42239d44392380a0e2c51d80, type: 3}
     - {fileID: -2666855759042507733, guid: f26286919c1611949b2c3ea4f464de7a, type: 3}
+    leafToFreeze: 
   - leafsInRow:
     - {fileID: 7568174617729065683, guid: a482e78d42239d44392380a0e2c51d80, type: 3}
     - {fileID: 366340948363469684, guid: 16e76260f0f5b6d48b1057fbc6c223ea, type: 3}
@@ -448,6 +451,7 @@ MonoBehaviour:
     - {fileID: 6781709933695143702, guid: 8a085c3f1028ddb439f6e40682fc55cb, type: 3}
     - {fileID: 366340948363469684, guid: 16e76260f0f5b6d48b1057fbc6c223ea, type: 3}
     - {fileID: 7568174617729065683, guid: a482e78d42239d44392380a0e2c51d80, type: 3}
+    leafToFreeze: 
   - leafsInRow:
     - {fileID: -8365905124348521372, guid: 597909c07e6a55b4a8dd5398fcaf1837, type: 3}
     - {fileID: -2666855759042507733, guid: f26286919c1611949b2c3ea4f464de7a, type: 3}
@@ -456,6 +460,7 @@ MonoBehaviour:
     - {fileID: 7568174617729065683, guid: a482e78d42239d44392380a0e2c51d80, type: 3}
     - {fileID: -8365905124348521372, guid: 597909c07e6a55b4a8dd5398fcaf1837, type: 3}
     - {fileID: 7568174617729065683, guid: a482e78d42239d44392380a0e2c51d80, type: 3}
+    leafToFreeze: 
   - leafsInRow:
     - {fileID: 7568174617729065683, guid: a482e78d42239d44392380a0e2c51d80, type: 3}
     - {fileID: -8365905124348521372, guid: 597909c07e6a55b4a8dd5398fcaf1837, type: 3}
@@ -464,6 +469,7 @@ MonoBehaviour:
     - {fileID: -2666855759042507733, guid: f26286919c1611949b2c3ea4f464de7a, type: 3}
     - {fileID: -8365905124348521372, guid: 597909c07e6a55b4a8dd5398fcaf1837, type: 3}
     - {fileID: -2666855759042507733, guid: f26286919c1611949b2c3ea4f464de7a, type: 3}
+    leafToFreeze: 
   - leafsInRow:
     - {fileID: 7568174617729065683, guid: a482e78d42239d44392380a0e2c51d80, type: 3}
     - {fileID: 366340948363469684, guid: 16e76260f0f5b6d48b1057fbc6c223ea, type: 3}
@@ -472,6 +478,12 @@ MonoBehaviour:
     - {fileID: 6781709933695143702, guid: 8a085c3f1028ddb439f6e40682fc55cb, type: 3}
     - {fileID: 366340948363469684, guid: 16e76260f0f5b6d48b1057fbc6c223ea, type: 3}
     - {fileID: -2666855759042507733, guid: f26286919c1611949b2c3ea4f464de7a, type: 3}
+    leafToFreeze: 
+  leafToFreeze:
+  - {x: 2, y: 6}
+  - {x: 4, y: 6}
+  - {x: 2, y: 3}
+  - {x: 4, y: 3}
 --- !u!1001 &856092636
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -636,6 +648,7 @@ MonoBehaviour:
   availableMatches: 0
   woodLevel: 0
   shuffleCounter: 0
+  woodBlockSprite: []
 --- !u!4 &1047767097
 Transform:
   m_ObjectHideFlags: 0

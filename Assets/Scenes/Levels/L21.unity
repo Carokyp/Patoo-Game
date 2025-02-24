@@ -558,7 +558,9 @@ MonoBehaviour:
     - {fileID: -3305818568112437277, guid: 20b7c1ed020c62b4f8dd070bfc5a33b3, type: 3}
     - {fileID: 6781709933695143702, guid: 8a085c3f1028ddb439f6e40682fc55cb, type: 3}
     leafToFreeze: 
-  leafToFreeze: []
+  leafToFreeze:
+  - {x: 1, y: 1}
+  - {x: 6, y: 1}
 --- !u!1 &1047767095
 GameObject:
   m_ObjectHideFlags: 0

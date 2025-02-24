@@ -445,6 +445,7 @@ MonoBehaviour:
     - {fileID: -2666855759042507733, guid: f26286919c1611949b2c3ea4f464de7a, type: 3}
     - {fileID: -2666855759042507733, guid: f26286919c1611949b2c3ea4f464de7a, type: 3}
     - {fileID: -8365905124348521372, guid: 597909c07e6a55b4a8dd5398fcaf1837, type: 3}
+    leafToFreeze: 
   - leafsInRow:
     - {fileID: -2666855759042507733, guid: f26286919c1611949b2c3ea4f464de7a, type: 3}
     - {fileID: -8365905124348521372, guid: 597909c07e6a55b4a8dd5398fcaf1837, type: 3}
@@ -453,30 +454,34 @@ MonoBehaviour:
     - {fileID: -2666855759042507733, guid: f26286919c1611949b2c3ea4f464de7a, type: 3}
     - {fileID: -8365905124348521372, guid: 597909c07e6a55b4a8dd5398fcaf1837, type: 3}
     - {fileID: -2666855759042507733, guid: f26286919c1611949b2c3ea4f464de7a, type: 3}
+    leafToFreeze: 
   - leafsInRow:
     - {fileID: -2666855759042507733, guid: f26286919c1611949b2c3ea4f464de7a, type: 3}
     - {fileID: -2666855759042507733, guid: f26286919c1611949b2c3ea4f464de7a, type: 3}
     - {fileID: -8365905124348521372, guid: 597909c07e6a55b4a8dd5398fcaf1837, type: 3}
-    - {fileID: -2666855759042507733, guid: f26286919c1611949b2c3ea4f464de7a, type: 3}
+    - {fileID: -8365905124348521372, guid: ea065b1571928a1459898307f82c91af, type: 3}
     - {fileID: -8365905124348521372, guid: 597909c07e6a55b4a8dd5398fcaf1837, type: 3}
     - {fileID: -2666855759042507733, guid: f26286919c1611949b2c3ea4f464de7a, type: 3}
     - {fileID: -2666855759042507733, guid: f26286919c1611949b2c3ea4f464de7a, type: 3}
+    leafToFreeze: 
   - leafsInRow:
-    - {fileID: -2666855759042507733, guid: f26286919c1611949b2c3ea4f464de7a, type: 3}
     - {fileID: -2666855759042507733, guid: f26286919c1611949b2c3ea4f464de7a, type: 3}
     - {fileID: -2666855759042507733, guid: f26286919c1611949b2c3ea4f464de7a, type: 3}
     - {fileID: -8365905124348521372, guid: ea065b1571928a1459898307f82c91af, type: 3}
+    - {fileID: -2666855759042507733, guid: f9972594d7e7f284daaf29714707d740, type: 3}
+    - {fileID: -8365905124348521372, guid: ea065b1571928a1459898307f82c91af, type: 3}
     - {fileID: -2666855759042507733, guid: f26286919c1611949b2c3ea4f464de7a, type: 3}
     - {fileID: -2666855759042507733, guid: f26286919c1611949b2c3ea4f464de7a, type: 3}
-    - {fileID: -2666855759042507733, guid: f26286919c1611949b2c3ea4f464de7a, type: 3}
+    leafToFreeze: 
   - leafsInRow:
     - {fileID: -2666855759042507733, guid: f26286919c1611949b2c3ea4f464de7a, type: 3}
     - {fileID: -2666855759042507733, guid: f26286919c1611949b2c3ea4f464de7a, type: 3}
     - {fileID: -8365905124348521372, guid: 597909c07e6a55b4a8dd5398fcaf1837, type: 3}
-    - {fileID: -2666855759042507733, guid: f26286919c1611949b2c3ea4f464de7a, type: 3}
+    - {fileID: -8365905124348521372, guid: ea065b1571928a1459898307f82c91af, type: 3}
     - {fileID: -8365905124348521372, guid: 597909c07e6a55b4a8dd5398fcaf1837, type: 3}
     - {fileID: -2666855759042507733, guid: f26286919c1611949b2c3ea4f464de7a, type: 3}
     - {fileID: -2666855759042507733, guid: f26286919c1611949b2c3ea4f464de7a, type: 3}
+    leafToFreeze: 
   - leafsInRow:
     - {fileID: -2666855759042507733, guid: f26286919c1611949b2c3ea4f464de7a, type: 3}
     - {fileID: -8365905124348521372, guid: 597909c07e6a55b4a8dd5398fcaf1837, type: 3}
@@ -485,6 +490,7 @@ MonoBehaviour:
     - {fileID: -2666855759042507733, guid: f26286919c1611949b2c3ea4f464de7a, type: 3}
     - {fileID: -8365905124348521372, guid: 597909c07e6a55b4a8dd5398fcaf1837, type: 3}
     - {fileID: -2666855759042507733, guid: f26286919c1611949b2c3ea4f464de7a, type: 3}
+    leafToFreeze: 
   - leafsInRow:
     - {fileID: -8365905124348521372, guid: 597909c07e6a55b4a8dd5398fcaf1837, type: 3}
     - {fileID: -2666855759042507733, guid: f26286919c1611949b2c3ea4f464de7a, type: 3}
@@ -493,6 +499,8 @@ MonoBehaviour:
     - {fileID: -2666855759042507733, guid: f26286919c1611949b2c3ea4f464de7a, type: 3}
     - {fileID: -2666855759042507733, guid: f26286919c1611949b2c3ea4f464de7a, type: 3}
     - {fileID: -8365905124348521372, guid: 597909c07e6a55b4a8dd5398fcaf1837, type: 3}
+    leafToFreeze: 
+  leafToFreeze: []
 --- !u!1001 &871337079
 PrefabInstance:
   m_ObjectHideFlags: 0

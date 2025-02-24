@@ -241,7 +241,7 @@ public class Board : MonoBehaviour
     {
         Debug.Log("Row");
 
-        yield return new WaitForSeconds(.2f);
+        yield return new WaitForSeconds(0f);
 
         int nullCounter = 0;
         int wood = 0;
@@ -326,10 +326,10 @@ public class Board : MonoBehaviour
     private IEnumerator FillBoardCo()
     {
         Debug.Log("FillBoard");
-        yield return new WaitForSeconds(.5f);
+        yield return new WaitForSeconds(0f);
         ReFillBoard();
 
-        yield return new WaitForSeconds(.5f);
+        yield return new WaitForSeconds(0.7f);
 
         
         matchFind.FindAllMatches();
