@@ -602,6 +602,9 @@ MonoBehaviour:
   availableMatches: 0
   woodLevel: 0
   shuffleCounter: 0
+  woodBlockSprite:
+  - {fileID: 21300000, guid: 4c9513198f734d24a8d8e02dca583ccc, type: 3}
+  - {fileID: 21300000, guid: 4e0dc35d61e1f6748a45210273033d57, type: 3}
 --- !u!4 &1047767097
 Transform:
   m_ObjectHideFlags: 0

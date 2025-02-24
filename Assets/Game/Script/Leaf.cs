@@ -32,6 +32,7 @@ public class Leaf : MonoBehaviour
 
     public MatchFinder matchFind;
 
+    public bool freezePosition = false;
 
     private void Awake()
     {

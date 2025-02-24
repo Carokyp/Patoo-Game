@@ -20,6 +20,7 @@ public class MatchFinder : MonoBehaviour
     bool firstMatch = false;
     public bool woodLevel = false;
     public int shuffleCounter = 0;
+    public Sprite[] woodBlockSprite;
     
 
     
@@ -374,6 +375,8 @@ public class MatchFinder : MonoBehaviour
                                 {
                                     if (!IsWoodblock(aboveLeaf.type))
                                     {
+                                        Debug.LogWarning(currentLeaf.type);
+                                        Debug.LogWarning(aboveLeaf.type);
                                         // check side matches
                                         if (currentLeaf.posIndex.y < board.height - 2)
                                         {
@@ -622,18 +625,23 @@ public class MatchFinder : MonoBehaviour
 
     void CrackWood(Leaf leaf)
     {
+        
+
         if (leaf.type == Leaf.LeafType.woodBlock)
         {
-            leaf.gameObject.GetComponent<SpriteRenderer>().color = Color.yellow;
+            
+            leaf.gameObject.GetComponent<SpriteRenderer>().sprite = woodBlockSprite[0];
             leaf.type = Leaf.LeafType.woodBlockCrack1;
         }
         else if (leaf.type == Leaf.LeafType.woodBlockCrack1)
         {
-            leaf.gameObject.GetComponent<SpriteRenderer>().color = Color.red;
+            
+            leaf.gameObject.GetComponent<SpriteRenderer>().sprite = woodBlockSprite[1];
             leaf.type = Leaf.LeafType.woodBlockCrack2;
         }
         else if (leaf.type == Leaf.LeafType.woodBlockCrack2) 
         {
+            
             leaf.isMatched = true;
             currentMatches.Add(leaf);
             
@@ -641,7 +649,7 @@ public class MatchFinder : MonoBehaviour
 
 
     }
-
+    
     void CheckWood(Leaf leaf)
     {
 
@@ -652,7 +660,7 @@ public class MatchFinder : MonoBehaviour
         {
             if (IsWoodblock(board.allLeafs[x -1, y].type))
             {
-                CrackWood(board.allLeafs[x -1, y]);
+                CrackWood(board.allLeafs[x - 1, y]);
             }
         }
         // Right
@@ -660,7 +668,7 @@ public class MatchFinder : MonoBehaviour
         {
             if (IsWoodblock(board.allLeafs[x + 1, y].type))
             {
-                CrackWood(board.allLeafs[x + 1, y]);
+               CrackWood(board.allLeafs[x + 1, y]);
             }
         }
         // Below

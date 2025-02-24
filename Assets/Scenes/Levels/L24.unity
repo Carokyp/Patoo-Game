@@ -590,6 +590,9 @@ MonoBehaviour:
   availableMatches: 0
   woodLevel: 0
   shuffleCounter: 0
+  woodBlockSprite:
+  - {fileID: 0}
+  - {fileID: 0}
 --- !u!4 &1047767097
 Transform:
   m_ObjectHideFlags: 0
