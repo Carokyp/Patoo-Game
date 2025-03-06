@@ -235,6 +235,7 @@ public class Board : MonoBehaviour
         }
 
         StartCoroutine(DecreaseRowCo());
+        matchFind.crackTimer();
     }
 
     private IEnumerator DecreaseRowCo()

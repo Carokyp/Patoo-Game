@@ -203,9 +203,10 @@ public class Leaf : MonoBehaviour
             else
             {
                 board.DestroyMatches();
+                
             }
         }
-
+        
     }
 
 }
