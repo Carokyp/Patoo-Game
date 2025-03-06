@@ -506,7 +506,7 @@ MonoBehaviour:
     - {fileID: -2666855759042507733, guid: f26286919c1611949b2c3ea4f464de7a, type: 3}
     - {fileID: 366340948363469684, guid: 16e76260f0f5b6d48b1057fbc6c223ea, type: 3}
     - {fileID: 7568174617729065683, guid: a482e78d42239d44392380a0e2c51d80, type: 3}
-    - {fileID: -2666855759042507733, guid: f26286919c1611949b2c3ea4f464de7a, type: 3}
+    - {fileID: -2666855759042507733, guid: 9a96af1b815b54aaea638d701407fce1, type: 3}
     - {fileID: 7568174617729065683, guid: a482e78d42239d44392380a0e2c51d80, type: 3}
     - {fileID: 366340948363469684, guid: 16e76260f0f5b6d48b1057fbc6c223ea, type: 3}
     - {fileID: -2666855759042507733, guid: f26286919c1611949b2c3ea4f464de7a, type: 3}
@@ -534,6 +534,7 @@ MonoBehaviour:
     - {fileID: 366340948363469684, guid: 16e76260f0f5b6d48b1057fbc6c223ea, type: 3}
     - {fileID: 7568174617729065683, guid: a482e78d42239d44392380a0e2c51d80, type: 3}
     - {fileID: -2666855759042507733, guid: f26286919c1611949b2c3ea4f464de7a, type: 3}
+  leafToFreeze: []
 --- !u!1 &1047767095
 GameObject:
   m_ObjectHideFlags: 0
@@ -574,6 +575,9 @@ MonoBehaviour:
   availableMatches: 0
   woodLevel: 0
   shuffleCounter: 0
+  woodBlockSprite: []
+  blocksToCrack: []
+  checkPossibleMatches: []
 --- !u!4 &1047767097
 Transform:
   m_ObjectHideFlags: 0
