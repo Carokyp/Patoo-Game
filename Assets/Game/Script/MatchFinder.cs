@@ -20,9 +20,11 @@ public class MatchFinder : MonoBehaviour
     bool firstMatch = false;
     public bool woodLevel = false;
     public int shuffleCounter = 0;
-    
+    public Sprite[] woodBlockSprite;
+    public List<Leaf> blocksToCrack = new List<Leaf>();
+    public List<StoreMatches> checkPossibleMatches = new List<StoreMatches>();
 
-    
+
     
 
     private void Awake()
@@ -43,6 +45,7 @@ public class MatchFinder : MonoBehaviour
         test = false;
         availableMatches = 0;
         possibleMatches.Clear();
+        checkPossibleMatches.Clear();
         
 
         for (int x = 0; x < board.width; x++)
@@ -123,6 +126,8 @@ public class MatchFinder : MonoBehaviour
 
                                     if (!IsWoodblock(leftLeaf.type))
                                     {
+                                       
+
                                         // check side matches
                                         if (currentLeaf.posIndex.x > 1)
                                         {
@@ -133,6 +138,14 @@ public class MatchFinder : MonoBehaviour
                                             {
                                                 availableMatches++;
                                                 possibleMatches.Add(currentLeaf);
+
+                                                StoreMatches match = new StoreMatches();
+
+                                                match.leaf1 = leftGapLeaf;
+                                                match.leaf2 = currentLeaf;
+                                                match.leaf3 = rightLeaf;
+
+                                                checkPossibleMatches.Add(match);
                                             }
                                         }
                                         // check diaganol matches
@@ -146,6 +159,14 @@ public class MatchFinder : MonoBehaviour
                                             
                                                 availableMatches++;
                                                 possibleMatches.Add(currentLeaf);
+
+                                                StoreMatches match = new StoreMatches();
+
+                                                match.leaf1 = aboveDiagonal;
+                                                match.leaf2 = currentLeaf;
+                                                match.leaf3 = rightLeaf;
+
+                                                checkPossibleMatches.Add(match);
                                             }
                                         }
 
@@ -158,6 +179,14 @@ public class MatchFinder : MonoBehaviour
 
                                                 availableMatches++;
                                                 possibleMatches.Add(currentLeaf);
+
+                                                StoreMatches match = new StoreMatches();
+
+                                                match.leaf1 = belowDiagonal;
+                                                match.leaf2 = currentLeaf;
+                                                match.leaf3 = rightLeaf;
+
+                                                checkPossibleMatches.Add(match);
                                             }
                                         }
                                     }
@@ -173,6 +202,7 @@ public class MatchFinder : MonoBehaviour
                                 {
                                     if (!IsWoodblock(rightLeaf.type))
                                     {
+                                        
                                         // check side matches
                                         if (currentLeaf.posIndex.x < board.width - 2)
                                         {
@@ -183,6 +213,14 @@ public class MatchFinder : MonoBehaviour
                                             {
                                                 availableMatches++;
                                                 possibleMatches.Add(currentLeaf);
+
+                                                StoreMatches match = new StoreMatches();
+
+                                                match.leaf1 = leftLeaf;
+                                                match.leaf2 = currentLeaf;
+                                                match.leaf3 = rightGapLeaf;
+
+                                                checkPossibleMatches.Add(match);
                                             }
                                         }
 
@@ -196,6 +234,14 @@ public class MatchFinder : MonoBehaviour
 
                                                 availableMatches++;
                                                 possibleMatches.Add(currentLeaf);
+
+                                                StoreMatches match = new StoreMatches();
+
+                                                match.leaf1 = leftLeaf;
+                                                match.leaf2 = currentLeaf;
+                                                match.leaf3 = aboveDiagonal;
+
+                                                checkPossibleMatches.Add(match);
                                             }
                                         }
 
@@ -208,6 +254,14 @@ public class MatchFinder : MonoBehaviour
 
                                                 availableMatches++;
                                                 possibleMatches.Add(currentLeaf);
+
+                                                StoreMatches match = new StoreMatches();
+
+                                                match.leaf1 = leftLeaf;
+                                                match.leaf2 = currentLeaf;
+                                                match.leaf3 = belowDiagonal;
+
+                                                checkPossibleMatches.Add(match);
                                             }
                                         }
                                     }
@@ -225,10 +279,18 @@ public class MatchFinder : MonoBehaviour
                                         Leaf diagonalRightLeaf = board.allLeafs[x + 1, y + 1];
                                         Leaf diagonalLeftLeaf = board.allLeafs[x - 1, y + 1];
 
+
                                         if (currentLeaf.type == diagonalRightLeaf.type && currentLeaf.type == diagonalLeftLeaf.type)
                                         {
                                             availableMatches++;
                                             possibleMatches.Add(currentLeaf);
+                                            StoreMatches match = new StoreMatches();
+
+                                            match.leaf1 = diagonalLeftLeaf;
+                                            match.leaf2 = currentLeaf;
+                                            match.leaf3 = diagonalRightLeaf;
+
+                                            checkPossibleMatches.Add(match);
                                         }
                                     }
                                 }
@@ -240,10 +302,19 @@ public class MatchFinder : MonoBehaviour
                                         Leaf diagonalRightLeaf = board.allLeafs[x + 1, y - 1];
                                         Leaf diagonalLeftLeaf = board.allLeafs[x - 1, y - 1];
 
+
                                         if (currentLeaf.type == diagonalRightLeaf.type && currentLeaf.type == diagonalLeftLeaf.type)
                                         {
                                             availableMatches++;
                                             possibleMatches.Add(currentLeaf);
+
+                                            StoreMatches match = new StoreMatches();
+
+                                            match.leaf1 = diagonalLeftLeaf;
+                                            match.leaf2 = currentLeaf;
+                                            match.leaf3 = diagonalRightLeaf;
+
+                                            checkPossibleMatches.Add(match);
                                         }
                                     }
                                 }
@@ -334,6 +405,14 @@ public class MatchFinder : MonoBehaviour
                                             {
                                                 availableMatches++;
                                                 possibleMatches.Add(currentLeaf);
+
+                                                StoreMatches match = new StoreMatches();
+
+                                                match.leaf1 = belowGapLeaf;
+                                                match.leaf2 = currentLeaf;
+                                                match.leaf3 = aboveLeaf;
+
+                                                checkPossibleMatches.Add(match);
                                             }
                                         }
                                         // check diaganol matches
@@ -347,6 +426,14 @@ public class MatchFinder : MonoBehaviour
 
                                                 availableMatches++;
                                                 possibleMatches.Add(currentLeaf);
+
+                                                StoreMatches match = new StoreMatches();
+
+                                                match.leaf1 = rightDiagonal;
+                                                match.leaf2 = currentLeaf;
+                                                match.leaf3 = aboveLeaf;
+
+                                                checkPossibleMatches.Add(match);
                                             }
                                         }
 
@@ -359,6 +446,14 @@ public class MatchFinder : MonoBehaviour
 
                                                 availableMatches++;
                                                 possibleMatches.Add(currentLeaf);
+
+                                                StoreMatches match = new StoreMatches();
+
+                                                match.leaf1 = leftDiagonal;
+                                                match.leaf2 = currentLeaf;
+                                                match.leaf3 = aboveLeaf;
+
+                                                checkPossibleMatches.Add(match);
                                             }
                                         }
                                     }
@@ -374,7 +469,7 @@ public class MatchFinder : MonoBehaviour
                                 {
                                     if (!IsWoodblock(aboveLeaf.type))
                                     {
-                                        // check side matches
+
                                         if (currentLeaf.posIndex.y < board.height - 2)
                                         {
 
@@ -384,6 +479,14 @@ public class MatchFinder : MonoBehaviour
                                             {
                                                 availableMatches++;
                                                 possibleMatches.Add(currentLeaf);
+
+                                                StoreMatches match = new StoreMatches();
+
+                                                match.leaf1 = belowLeaf;
+                                                match.leaf2 = currentLeaf;
+                                                match.leaf3 = aboveGapLeaf;
+
+                                                checkPossibleMatches.Add(match);
                                             }
                                         }
 
@@ -397,6 +500,14 @@ public class MatchFinder : MonoBehaviour
 
                                                 availableMatches++;
                                                 possibleMatches.Add(currentLeaf);
+
+                                                StoreMatches match = new StoreMatches();
+
+                                                match.leaf1 = belowLeaf;
+                                                match.leaf2 = currentLeaf;
+                                                match.leaf3 = rightDiagonal;
+
+                                                checkPossibleMatches.Add(match);
                                             }
                                         }
 
@@ -409,6 +520,15 @@ public class MatchFinder : MonoBehaviour
 
                                                 availableMatches++;
                                                 possibleMatches.Add(currentLeaf);
+
+                                                StoreMatches match = new StoreMatches();
+
+                                                match.leaf1 = belowLeaf;
+                                                match.leaf2 = currentLeaf;
+                                                match.leaf3 = leftDiagonal;
+
+                                                checkPossibleMatches.Add(match);
+
                                             }
                                         }
                                     }
@@ -421,8 +541,9 @@ public class MatchFinder : MonoBehaviour
                                 #region checkMiddleMatch
                                 if (currentLeaf.posIndex.x < board.width - 1)
                                 {
-                                    if (!IsWoodblock(board.allLeafs[x, y - 1].type))
+                                    if (!IsWoodblock(board.allLeafs[x + 1, y].type))
                                     {
+
                                         Leaf diagonalAboveLeaf = board.allLeafs[x + 1, y + 1];
                                         Leaf diagonalBelowLeaf = board.allLeafs[x + 1, y - 1];
 
@@ -430,6 +551,14 @@ public class MatchFinder : MonoBehaviour
                                         {
                                             availableMatches++;
                                             possibleMatches.Add(currentLeaf);
+
+                                            StoreMatches match = new StoreMatches();
+
+                                            match.leaf1 = diagonalAboveLeaf;
+                                            match.leaf2 = currentLeaf;
+                                            match.leaf3 = diagonalBelowLeaf;
+
+                                            checkPossibleMatches.Add(match);
                                         }
                                     }
                                 }
@@ -445,6 +574,14 @@ public class MatchFinder : MonoBehaviour
                                         {
                                             availableMatches++;
                                             possibleMatches.Add(currentLeaf);
+
+                                            StoreMatches match = new StoreMatches();
+
+                                            match.leaf1 = diagonalAboveLeaf;
+                                            match.leaf2 = currentLeaf;
+                                            match.leaf3 = diagonalBelowLeaf;
+
+                                            checkPossibleMatches.Add(match);
                                         }
                                     }
                                 }
@@ -473,7 +610,7 @@ public class MatchFinder : MonoBehaviour
             currentMatches = currentMatches.Distinct().ToList();
 
         }
-        
+
 
         CheckForSpiders();
         firstMatch = true;
@@ -622,18 +759,23 @@ public class MatchFinder : MonoBehaviour
 
     void CrackWood(Leaf leaf)
     {
+        
+
         if (leaf.type == Leaf.LeafType.woodBlock)
         {
-            leaf.gameObject.GetComponent<SpriteRenderer>().color = Color.yellow;
+            
+            leaf.gameObject.GetComponent<SpriteRenderer>().sprite = woodBlockSprite[0];
             leaf.type = Leaf.LeafType.woodBlockCrack1;
         }
         else if (leaf.type == Leaf.LeafType.woodBlockCrack1)
         {
-            leaf.gameObject.GetComponent<SpriteRenderer>().color = Color.red;
+            
+            leaf.gameObject.GetComponent<SpriteRenderer>().sprite = woodBlockSprite[1];
             leaf.type = Leaf.LeafType.woodBlockCrack2;
         }
         else if (leaf.type == Leaf.LeafType.woodBlockCrack2) 
         {
+            
             leaf.isMatched = true;
             currentMatches.Add(leaf);
             
@@ -641,7 +783,7 @@ public class MatchFinder : MonoBehaviour
 
 
     }
-
+    
     void CheckWood(Leaf leaf)
     {
 
@@ -652,7 +794,8 @@ public class MatchFinder : MonoBehaviour
         {
             if (IsWoodblock(board.allLeafs[x -1, y].type))
             {
-                CrackWood(board.allLeafs[x -1, y]);
+                // CrackWood(board.allLeafs[x - 1, y]);
+                blocksToCrack.Add(board.allLeafs[x - 1, y]);
             }
         }
         // Right
@@ -660,7 +803,8 @@ public class MatchFinder : MonoBehaviour
         {
             if (IsWoodblock(board.allLeafs[x + 1, y].type))
             {
-                CrackWood(board.allLeafs[x + 1, y]);
+                // CrackWood(board.allLeafs[x + 1, y]);
+                blocksToCrack.Add(board.allLeafs[x + 1, y]);
             }
         }
         // Below
@@ -668,7 +812,8 @@ public class MatchFinder : MonoBehaviour
         {
             if (IsWoodblock(board.allLeafs[x, y -1].type))
             {
-                CrackWood(board.allLeafs[x, y -1]);
+                //CrackWood(board.allLeafs[x, y -1]);
+                blocksToCrack.Add(board.allLeafs[x, y - 1]);
             }
         }
         // Above
@@ -676,10 +821,32 @@ public class MatchFinder : MonoBehaviour
         {
             if (IsWoodblock(board.allLeafs[x, y +1].type))
             {
-                CrackWood(board.allLeafs[x, y +1]);
+                //CrackWood(board.allLeafs[x, y +1]);
+                blocksToCrack.Add(board.allLeafs[x, y + 1]);
             }
         }
     }
 
+    public void crackTimer() 
+    {
+       // yield return new WaitForSeconds(0);
+
+        foreach (Leaf wood in blocksToCrack)
+        {
+            CrackWood(wood);
+        }
+        blocksToCrack.Clear();
+    }
+
+    
 
 }
+
+[System.Serializable]
+public class StoreMatches
+{
+    public Leaf leaf1;
+    public Leaf leaf2;
+    public Leaf leaf3;
+}
+

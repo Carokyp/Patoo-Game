@@ -5,7 +5,8 @@ using UnityEngine;
 public class BoardLayout : MonoBehaviour
 {
 
-    public LayoutRow[] allRows; 
+    public LayoutRow[] allRows;
+    public Vector2Int[] leafToFreeze;
 
     public Leaf[,] GetLayout()
     {
@@ -15,10 +16,19 @@ public class BoardLayout : MonoBehaviour
         {
             for (int x = 0; x < allRows[y].leafsInRow.Length; x++)
             {
+
                 if (x < theLayout.GetLength(0))
                 {
                     if (allRows[y].leafsInRow[x] != null)
                     {
+                       /* if (allRows[y].leafToFreeze != null)
+                        {
+                            for (int i = 0; i < allRows[y].leafToFreeze.Length; i++)
+                            {
+                                allRows[y].leafsInRow[allRows[y].fre      leafToFreeze[i].
+
+                            }
+                        }*/
                         theLayout[x, allRows.Length - 1 - y] = allRows[y].leafsInRow[x];
                     }
                 }
@@ -35,5 +45,5 @@ public class BoardLayout : MonoBehaviour
 public class LayoutRow 
 {
     public Leaf[] leafsInRow;
-
+    //public int[] leafToFreeze;
 }

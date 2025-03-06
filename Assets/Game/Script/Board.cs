@@ -38,8 +38,6 @@ public class Board : MonoBehaviour
     private Leaf[,] layoutStore;
 
 
-
-
     private void Awake()
     {
         uiMan = FindObjectOfType<UIManager>();
@@ -56,14 +54,6 @@ public class Board : MonoBehaviour
         layoutStore = new Leaf[width, height];
 
         Setup();
-
-        matchFind.FindAllMatches();
-        
-        if (matchFind.availableMatches <= 0)
-        {
-            Debug.Log("callingShuffle");
-            StartCoroutine(matchFind.NoMatch());
-        }
 
     }
 
@@ -113,6 +103,14 @@ public class Board : MonoBehaviour
             }
         }
 
+        if(boardLayout.leafToFreeze != null)
+        {
+            foreach(Vector2Int position in boardLayout.leafToFreeze)
+            {
+                allLeafs[position.x, position.y].freezePosition = true;
+            }
+        }
+
     }
 
     private void SpawnLeaf(Vector2Int pos, Leaf leafToSpawn)
@@ -143,6 +141,8 @@ public class Board : MonoBehaviour
         allLeafs[pos.x, pos.y] = leaf;
 
         leaf.SetupLeaf(pos, this);
+
+       
     }
 
     bool MatcheAt(Vector2Int posToCheck, Leaf leafToCheck)
@@ -235,13 +235,14 @@ public class Board : MonoBehaviour
         }
 
         StartCoroutine(DecreaseRowCo());
+        matchFind.crackTimer();
     }
 
     private IEnumerator DecreaseRowCo()
     {
         Debug.Log("Row");
 
-        yield return new WaitForSeconds(.2f);
+        yield return new WaitForSeconds(0f);
 
         int nullCounter = 0;
         int wood = 0;
@@ -261,26 +262,26 @@ public class Board : MonoBehaviour
             {
                 if (allLeafs[x, y] == null)
                 {
-                    nullCounter++; 
-                    
+                    nullCounter++;
+
                 }
                 else if (nullCounter > 0)
 
                 {
-                    if (!matchFind.IsWoodblock(allLeafs[x, y].type))
+                    if (!matchFind.IsWoodblock(allLeafs[x, y].type) )
                     {
-                      
-                        allLeafs[x, y].posIndex.y -= nullCounter;
-                        allLeafs[x, y - nullCounter] = allLeafs[x, y];
-
-                        allLeafs[x, y] = null;
-
-                       
-
-                        if (wood > 0)
+                        if (allLeafs[x, y].freezePosition == false)
                         {
-                            
-                            if (spaceBeforeWood > 1 )
+                   
+                          allLeafs[x, y].posIndex.y -= nullCounter;
+                          allLeafs[x, y - nullCounter] = allLeafs[x, y];
+
+                          allLeafs[x, y] = null;
+
+                          if (wood > 0)
+                          {
+
+                            if (spaceBeforeWood > 1)
                             {
                                 spaceBeforeWood--;
                             }
@@ -289,12 +290,21 @@ public class Board : MonoBehaviour
                                 nullCounter -= wood;
                                 wood = 0;
                             }
+                          }
+                        
+                        }
+                        else if (allLeafs[x, y].freezePosition == true)
+                        {
+                            Debug.LogWarning(allLeafs[x, y]);
+                            nullCounter++;
+                            wood++;
+                            spaceBeforeWood = nullCounter - wood;
                         }
 
                     }
-                    else if (matchFind.IsWoodblock(allLeafs[x, y].type))
+                    else if (matchFind.IsWoodblock(allLeafs[x, y].type) )
                     {
-
+                        
                         nullCounter++;
                         wood++;
                         spaceBeforeWood = nullCounter - wood;
@@ -317,10 +327,10 @@ public class Board : MonoBehaviour
     private IEnumerator FillBoardCo()
     {
         Debug.Log("FillBoard");
-        yield return new WaitForSeconds(.5f);
+        yield return new WaitForSeconds(0f);
         ReFillBoard();
 
-        yield return new WaitForSeconds(.5f);
+        yield return new WaitForSeconds(0.7f);
 
         
         matchFind.FindAllMatches();
@@ -469,7 +479,8 @@ public class Board : MonoBehaviour
                     }
 
                     leafsFromBoard[leafToUse].SetupLeaf(new Vector2Int(x, y), this);
-                    allLeafs[x, y] = leafsFromBoard[leafToUse];
+                    allLeafs[x, y] = leafsFromBoard[leafToUse]; 
+
 
                     leafsFromBoard.RemoveAt(leafToUse);
                 }
