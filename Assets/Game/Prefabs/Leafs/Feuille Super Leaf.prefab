@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: -2666855759042507733}
   - component: {fileID: 5585937263135486077}
   m_Layer: 0
-  m_Name: Feuille super bonus
+  m_Name: Feuille Super Leaf
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -76,7 +76,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: -1
   m_Sprite: {fileID: 21300000, guid: e96d48a2caba6e3449303fc1445e308e, type: 3}
-  m_Color: {r: 1, g: 0.537543, b: 0, a: 1}
+  m_Color: {r: 1, g: 0.30870283, b: 0, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -100,12 +100,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   posIndex: {x: 0, y: 0}
   board: {fileID: 0}
-  type: 1
+  type: 6
   isMatched: 0
   destroyEffect: {fileID: 9083038517896977231, guid: aace7b4b7634f2646866a72caef20e72, type: 3}
-  blastSize: 2
+  blastSize: 1
   scoreValue: 1000
   matchFind: {fileID: 0}
+  freezePosition: 0
 --- !u!61 &5585937263135486077
 BoxCollider2D:
   m_ObjectHideFlags: 0

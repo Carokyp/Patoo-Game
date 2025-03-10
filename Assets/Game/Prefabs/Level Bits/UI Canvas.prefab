@@ -1179,6 +1179,7 @@ MonoBehaviour:
   winDog3: {fileID: 9018658553897036318}
   happyDog: {fileID: 2850647607885386294}
   sadDog: {fileID: 6606125727867880282}
+  lostPanel: {fileID: 7851084583557847001}
   roundOverScreen: {fileID: 9018658553845835527}
 --- !u!114 &9018658553299335414
 MonoBehaviour:
@@ -3274,8 +3275,17 @@ PrefabInstance:
       propertyPath: m_Name
       value: Level Lost
       objectReference: {fileID: 0}
+    - target: {fileID: 8871289718381629141, guid: 7579097270d3541cd91844e7a44277e5, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7579097270d3541cd91844e7a44277e5, type: 3}
+--- !u!1 &7851084583557847001 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8871289718381629141, guid: 7579097270d3541cd91844e7a44277e5, type: 3}
+  m_PrefabInstance: {fileID: 1723050357672941836}
+  m_PrefabAsset: {fileID: 0}
 --- !u!224 &7851084583557847006 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 8871289718381629138, guid: 7579097270d3541cd91844e7a44277e5, type: 3}

@@ -14,12 +14,11 @@ public class UIManager : MonoBehaviour
     public GameObject winStar0, winStar1, winStar2, winStar3;
     public GameObject winDog0, winDog1, winDog2, winDog3;
     public GameObject happyDog,sadDog;
+    public GameObject lostPanel;
 
 
     public GameObject roundOverScreen;
 
-    
-    // Start is called before the first frame update
     void Start()
     {
 
@@ -37,12 +36,8 @@ public class UIManager : MonoBehaviour
         happyDog.SetActive(false);
         sadDog.SetActive(false);
 
+        lostPanel.SetActive(false);
 
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 }

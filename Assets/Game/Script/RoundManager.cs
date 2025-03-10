@@ -167,11 +167,16 @@ public class RoundManager : MonoBehaviour
         {
             uiMan.winStar0.SetActive(true);
             uiMan.winDog0.SetActive(true);
+            
             pauseButton.SetActive(false);
             soundButton.SetActive(false);
             soundOffButton.SetActive(false);
 
             replayButton.SetActive(true);
+
+            uiMan.lostPanel.SetActive(true);
+            uiMan.winText.gameObject.SetActive(false);
+            nextButton.SetActive(false);
 
             
             SFXManager.instance.PlayLoseSound();

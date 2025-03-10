@@ -17,7 +17,7 @@ public class Leaf : MonoBehaviour
 
     private Leaf otherLeaf;
 
-    public enum LeafType {green, yellow, red, brown, pink, spider, woodBlock, woodBlockCrack1, woodBlockCrack2}
+    public enum LeafType {green, yellow, red, brown, pink, spider, superLeaf, woodBlock, woodBlockCrack1, woodBlockCrack2}
     public LeafType type;
 
     public bool isMatched;

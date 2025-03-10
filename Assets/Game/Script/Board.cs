@@ -197,7 +197,7 @@ public class Board : MonoBehaviour
 
         if (allLeafs[pos.x, pos.y] != null)
         {
-            if (!matchFind.IsWoodblock(allLeafs[pos.x, pos.y].type))
+            if (!matchFind.IsWoodblock(allLeafs[pos.x, pos.y].type)) 
             {
 
             
@@ -219,12 +219,14 @@ public class Board : MonoBehaviour
             }
 
         }
-
+           
 
     }
 
     public void DestroyMatches()
     {
+        matchFind.crackTimer();
+
         for (int i = 0; i < matchFind.currentMatches.Count; i++)
         {
             if (matchFind.currentMatches[i] != null)
@@ -235,7 +237,7 @@ public class Board : MonoBehaviour
         }
 
         StartCoroutine(DecreaseRowCo());
-        matchFind.crackTimer();
+        
     }
 
     private IEnumerator DecreaseRowCo()

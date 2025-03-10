@@ -63,6 +63,7 @@ public class MatchFinder : MonoBehaviour
 
                         if (leftLeaf != null && rightLeaf != null)
                         {
+
                             if (leftLeaf.type == currentLeaf.type && rightLeaf.type == currentLeaf.type)
                             {
                                 bool inList = false;
@@ -613,6 +614,7 @@ public class MatchFinder : MonoBehaviour
 
 
         CheckForSpiders();
+        CheckForSuperLeaf();
         firstMatch = true;
 
        
@@ -677,6 +679,63 @@ public class MatchFinder : MonoBehaviour
         }
     }
 
+    public void CheckForSuperLeaf()
+    {
+        for (int i = 0; i < currentMatches.Count; i++)
+        {
+            Leaf leaf = currentMatches[i];
+
+            int x = leaf.posIndex.x;
+            int y = leaf.posIndex.y;
+
+            if (leaf.posIndex.x > 0)
+            {
+                if (board.allLeafs[x - 1, y] != null)
+                {
+                    if (board.allLeafs[x - 1, y].type == Leaf.LeafType.superLeaf)
+                    {
+                        MarkSuperLeafArea(new Vector2Int(x - 1, y), board.allLeafs[x - 1, y]);
+
+                    }
+                }
+            }
+
+            if (leaf.posIndex.x < board.width - 1)
+            {
+                if (board.allLeafs[x + 1, y] != null)
+                {
+                    if (board.allLeafs[x + 1, y].type == Leaf.LeafType.superLeaf)
+                    {
+                        MarkSuperLeafArea(new Vector2Int(x + 1, y), board.allLeafs[x + 1, y]);
+                    }
+                }
+            }
+
+            if (leaf.posIndex.y > 0)
+            {
+                if (board.allLeafs[x, y - 1] != null)
+                {
+                    if (board.allLeafs[x, y - 1].type == Leaf.LeafType.superLeaf)
+                    {
+                        MarkSuperLeafArea(new Vector2Int(x, y - 1), board.allLeafs[x, y - 1]);
+                    }
+                }
+            }
+
+            if (leaf.posIndex.y < board.height - 1)
+            {
+                if (board.allLeafs[x, y + 1] != null)
+                {
+                    if (board.allLeafs[x, y + 1].type == Leaf.LeafType.superLeaf)
+                    {
+                        MarkSuperLeafArea(new Vector2Int(x, y + 1), board.allLeafs[x, y + 1]);
+
+                    }
+                }
+            }
+        }
+    }
+
     public void MarkSpiderArea(Vector2Int spiderPos, Leaf theSpider ) 
     {
         for (int x = spiderPos.x - theSpider.blastSize; x <= spiderPos.x + theSpider.blastSize; x++ )
@@ -705,7 +764,30 @@ public class MatchFinder : MonoBehaviour
         
     }
 
-     public IEnumerator SadDog()
+    public void MarkSuperLeafArea(Vector2Int superLeafPos, Leaf theSuperLeaf)
+    {
+        for (int x = superLeafPos.x - theSuperLeaf.blastSize; x <= superLeafPos.x + theSuperLeaf.blastSize; x++)
+        {
+            for (int y = superLeafPos.y - theSuperLeaf.blastSize; y <= superLeafPos.y + theSuperLeaf.blastSize; y++)
+            {
+                if (x >= 0 && x < board.width && y >= 0 && y < board.height)
+                {
+                    if (board.allLeafs[x, y] != null && !IsWoodblock(board.allLeafs[x, y].type))
+                    {
+                        board.allLeafs[x, y].isMatched = true;
+                        currentMatches.Add(board.allLeafs[x, y]);
+
+                    }
+
+                }
+            }
+        }
+        currentMatches = currentMatches.Distinct().ToList();
+
+
+    }
+
+    public IEnumerator SadDog()
      {
           isSad = true;
           yield return new WaitForSeconds(0.2f);
@@ -775,10 +857,10 @@ public class MatchFinder : MonoBehaviour
         }
         else if (leaf.type == Leaf.LeafType.woodBlockCrack2) 
         {
-            
+            Debug.LogWarning("destroy wood");
             leaf.isMatched = true;
             currentMatches.Add(leaf);
-            
+     
         }
 
 
