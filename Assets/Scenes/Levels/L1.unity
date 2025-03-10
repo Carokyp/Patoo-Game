@@ -493,7 +493,12 @@ MonoBehaviour:
     - {fileID: -2666855759042507733, guid: f26286919c1611949b2c3ea4f464de7a, type: 3}
     - {fileID: -2666855759042507733, guid: f26286919c1611949b2c3ea4f464de7a, type: 3}
     - {fileID: -8365905124348521372, guid: 597909c07e6a55b4a8dd5398fcaf1837, type: 3}
+<<<<<<< Updated upstream
   leafToFreeze: []
+=======
+  leafToFreeze:
+  - {x: 3, y: 3}
+>>>>>>> Stashed changes
 --- !u!1001 &871337079
 PrefabInstance:
   m_ObjectHideFlags: 0
