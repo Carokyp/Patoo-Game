@@ -506,7 +506,7 @@ MonoBehaviour:
     - {fileID: -2666855759042507733, guid: f26286919c1611949b2c3ea4f464de7a, type: 3}
     - {fileID: 366340948363469684, guid: 16e76260f0f5b6d48b1057fbc6c223ea, type: 3}
     - {fileID: 7568174617729065683, guid: a482e78d42239d44392380a0e2c51d80, type: 3}
-    - {fileID: -2666855759042507733, guid: 9a96af1b815b54aaea638d701407fce1, type: 3}
+    - {fileID: -2666855759042507733, guid: f9972594d7e7f284daaf29714707d740, type: 3}
     - {fileID: 7568174617729065683, guid: a482e78d42239d44392380a0e2c51d80, type: 3}
     - {fileID: 366340948363469684, guid: 16e76260f0f5b6d48b1057fbc6c223ea, type: 3}
     - {fileID: -2666855759042507733, guid: f26286919c1611949b2c3ea4f464de7a, type: 3}
@@ -534,7 +534,8 @@ MonoBehaviour:
     - {fileID: 366340948363469684, guid: 16e76260f0f5b6d48b1057fbc6c223ea, type: 3}
     - {fileID: 7568174617729065683, guid: a482e78d42239d44392380a0e2c51d80, type: 3}
     - {fileID: -2666855759042507733, guid: f26286919c1611949b2c3ea4f464de7a, type: 3}
-  leafToFreeze: []
+  leafToFreeze:
+  - {x: 3, y: 3}
 --- !u!1 &1047767095
 GameObject:
   m_ObjectHideFlags: 0

@@ -857,6 +857,7 @@ public class MatchFinder : MonoBehaviour
         }
         else if (leaf.type == Leaf.LeafType.woodBlockCrack2) 
         {
+
             Debug.LogWarning("destroy wood");
             leaf.isMatched = true;
             currentMatches.Add(leaf);

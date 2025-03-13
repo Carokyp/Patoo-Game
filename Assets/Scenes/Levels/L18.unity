@@ -489,7 +489,7 @@ MonoBehaviour:
     - {fileID: -2666855759042507733, guid: f26286919c1611949b2c3ea4f464de7a, type: 3}
   - leafsInRow:
     - {fileID: -8365905124348521372, guid: ea065b1571928a1459898307f82c91af, type: 3}
-    - {fileID: -2666855759042507733, guid: 9a96af1b815b54aaea638d701407fce1, type: 3}
+    - {fileID: -2666855759042507733, guid: f9972594d7e7f284daaf29714707d740, type: 3}
     - {fileID: -8365905124348521372, guid: ea065b1571928a1459898307f82c91af, type: 3}
     - {fileID: -2666855759042507733, guid: f26286919c1611949b2c3ea4f464de7a, type: 3}
     - {fileID: 366340948363469684, guid: 16e76260f0f5b6d48b1057fbc6c223ea, type: 3}
@@ -539,7 +539,7 @@ MonoBehaviour:
     - {fileID: -8365905124348521372, guid: 597909c07e6a55b4a8dd5398fcaf1837, type: 3}
     - {fileID: -2666855759042507733, guid: f26286919c1611949b2c3ea4f464de7a, type: 3}
     - {fileID: -8365905124348521372, guid: ea065b1571928a1459898307f82c91af, type: 3}
-    - {fileID: -2666855759042507733, guid: 9a96af1b815b54aaea638d701407fce1, type: 3}
+    - {fileID: -2666855759042507733, guid: f9972594d7e7f284daaf29714707d740, type: 3}
     - {fileID: -8365905124348521372, guid: ea065b1571928a1459898307f82c91af, type: 3}
   - leafsInRow:
     - {fileID: 366340948363469684, guid: 16e76260f0f5b6d48b1057fbc6c223ea, type: 3}
@@ -550,6 +550,9 @@ MonoBehaviour:
     - {fileID: -8365905124348521372, guid: ea065b1571928a1459898307f82c91af, type: 3}
     - {fileID: -8365905124348521372, guid: ea065b1571928a1459898307f82c91af, type: 3}
     - {fileID: -8365905124348521372, guid: ea065b1571928a1459898307f82c91af, type: 3}
+  leafToFreeze:
+  - {x: 1, y: 6}
+  - {x: 6, y: 1}
 --- !u!1 &1047767095
 GameObject:
   m_ObjectHideFlags: 0
@@ -590,6 +593,9 @@ MonoBehaviour:
   availableMatches: 0
   woodLevel: 0
   shuffleCounter: 0
+  woodBlockSprite: []
+  blocksToCrack: []
+  checkPossibleMatches: []
 --- !u!4 &1047767097
 Transform:
   m_ObjectHideFlags: 0
