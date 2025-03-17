@@ -27,10 +27,13 @@ public class CanvasHandler : MonoBehaviour
             case < 2:
                 canvas[0].SetActive(true);
                 break;
-            case >= 2:
+            case <= 2.3f:
                 canvas[1].SetActive(true);
                 break;
-            
+            case >= 2.3f:
+                canvas[3].SetActive(true);
+                break;
+
 
             default: canvas[0].SetActive(true);
                 break;
