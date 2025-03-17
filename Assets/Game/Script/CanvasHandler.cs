@@ -7,7 +7,7 @@ public class CanvasHandler : MonoBehaviour
     public float screenW, screenH, ratio;
     public GameObject[] canvas;
 
-    private void Awake()
+    private void Start()
     {     
         Screen.orientation = ScreenOrientation.LandscapeRight;
         screenW = Screen.width;
