@@ -542,7 +542,7 @@ MonoBehaviour:
     - {fileID: -8365905124348521372, guid: ea065b1571928a1459898307f82c91af, type: 3}
     - {fileID: 9161155914549262849, guid: 7a2fe00d1c8971e439cce9306bbfc792, type: 3}
   - leafsInRow:
-    - {fileID: -2666855759042507733, guid: 9a96af1b815b54aaea638d701407fce1, type: 3}
+    - {fileID: -2666855759042507733, guid: f9972594d7e7f284daaf29714707d740, type: 3}
     - {fileID: -8365905124348521372, guid: ea065b1571928a1459898307f82c91af, type: 3}
     - {fileID: 366340948363469684, guid: 16e76260f0f5b6d48b1057fbc6c223ea, type: 3}
     - {fileID: -3305818568112437277, guid: 20b7c1ed020c62b4f8dd070bfc5a33b3, type: 3}
@@ -554,6 +554,7 @@ MonoBehaviour:
   - {x: 1, y: 7}
   - {x: 0, y: 6}
   - {x: 7, y: 1}
+  - {x: 6, y: 0}
   - {x: 6, y: 0}
 --- !u!1 &1047767095
 GameObject:
