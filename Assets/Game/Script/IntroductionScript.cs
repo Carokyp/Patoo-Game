@@ -16,7 +16,7 @@ public class IntroductionScript : MonoBehaviour
 
     IEnumerator introductionTimer() 
     {
-        yield return new WaitForSeconds(0.8f);
+        yield return new WaitForSeconds(0.9f);
         Time.timeScale = 0;
         speechBubble[speechIndex].SetActive(true);
     }
@@ -25,7 +25,7 @@ public class IntroductionScript : MonoBehaviour
     {
         Time.timeScale = 1;
         speechBubble[speechIndex].SetActive(false);
-        yield return new WaitForSeconds(0.8f);
+        yield return new WaitForSeconds(0.9f);
         
     }
 
