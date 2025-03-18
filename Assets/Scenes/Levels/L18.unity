@@ -230,6 +230,7 @@ MonoBehaviour:
   nextButton: {fileID: 98440947}
   pauseButton: {fileID: 9018658553299335416}
   soundButton: {fileID: 9018658553299335415}
+  helpButton: {fileID: 695565275}
   soundOffButton: {fileID: 9018658553299335414}
   shufflePanel: {fileID: 690136398}
   endingRound: 0
@@ -553,6 +554,11 @@ MonoBehaviour:
   leafToFreeze:
   - {x: 1, y: 6}
   - {x: 6, y: 1}
+--- !u!1 &695565275 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 604383669980343706, guid: afa92de8a987d5c47a810338b6e046b7, type: 3}
+  m_PrefabInstance: {fileID: 9018658553299335411}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1047767095
 GameObject:
   m_ObjectHideFlags: 0

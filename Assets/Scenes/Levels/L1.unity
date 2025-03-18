@@ -699,6 +699,7 @@ MonoBehaviour:
   nextButton: {fileID: 98440947}
   pauseButton: {fileID: 1290156691}
   soundButton: {fileID: 1337944278}
+  helpButton: {fileID: 3859410145324880871}
   soundOffButton: {fileID: 115226022}
   shufflePanel: {fileID: 690136398}
   endingRound: 0
@@ -707,7 +708,7 @@ MonoBehaviour:
   scoreSpeed: 5
   scoreTarget1: 7000
   scoreTarget2: 9000
-  scoreTarget3: 12000
+  scoreTarget3: 11000
   min: 0
   sec: 0
 --- !u!4 &309724714
@@ -3868,9 +3869,17 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: -85.339
       objectReference: {fileID: 0}
+    - target: {fileID: 7851084583557847001, guid: afa92de8a987d5c47a810338b6e046b7, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7851084583557847006, guid: afa92de8a987d5c47a810338b6e046b7, type: 3}
       propertyPath: m_RootOrder
       value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 7851084583557847006, guid: afa92de8a987d5c47a810338b6e046b7, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -428
       objectReference: {fileID: 0}
     - target: {fileID: 8128426328900324101, guid: afa92de8a987d5c47a810338b6e046b7, type: 3}
       propertyPath: m_SizeDelta.x
@@ -4094,7 +4103,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9018658552896003120, guid: afa92de8a987d5c47a810338b6e046b7, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -430.9228
+      value: -462
       objectReference: {fileID: 0}
     - target: {fileID: 9018658552896003121, guid: afa92de8a987d5c47a810338b6e046b7, type: 3}
       propertyPath: m_IsActive

@@ -230,6 +230,7 @@ MonoBehaviour:
   nextButton: {fileID: 98440947}
   pauseButton: {fileID: 9018658553299335416}
   soundButton: {fileID: 9018658553299335415}
+  helpButton: {fileID: 1049274770}
   soundOffButton: {fileID: 9018658553299335414}
   shufflePanel: {fileID: 690136398}
   endingRound: 0
@@ -611,6 +612,11 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1049274770 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 604383669980343706, guid: afa92de8a987d5c47a810338b6e046b7, type: 3}
+  m_PrefabInstance: {fileID: 9018658553299335411}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1050575520
 PrefabInstance:
   m_ObjectHideFlags: 0

@@ -230,10 +230,10 @@ MonoBehaviour:
   leafSpeed: 7
   matchFind: {fileID: 0}
   currentState: 1
-  spider: {fileID: 6781709933695143702, guid: 8a085c3f1028ddb439f6e40682fc55cb, type: 3}
-  spiderChance: 3
+  spider: {fileID: 6781709933695143702, guid: 534e40963f8d244348fc19ebe1e89479, type: 3}
+  spiderChance: 0.5
   roundMan: {fileID: 0}
-  bonusAmount: 0.75
+  bonusAmount: 1
 --- !u!4 &188437509
 Transform:
   m_ObjectHideFlags: 0
@@ -555,10 +555,6 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 604383669980343706, guid: afa92de8a987d5c47a810338b6e046b7, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 919356979513766152, guid: afa92de8a987d5c47a810338b6e046b7, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
@@ -870,6 +866,11 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 116359355931575484, guid: afa92de8a987d5c47a810338b6e046b7, type: 3}
   m_PrefabInstance: {fileID: 508091376}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &735748985 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 604383669980343706, guid: afa92de8a987d5c47a810338b6e046b7, type: 3}
+  m_PrefabInstance: {fileID: 508091376}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &933249395
 GameObject:
   m_ObjectHideFlags: 0
@@ -957,11 +958,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: be315dc64c3634442b9666b8d913f713, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  roundTime: 180
+  roundTime: 1
   replayButton: {fileID: 508091380}
   nextButton: {fileID: 508091377}
   pauseButton: {fileID: 508091383}
   soundButton: {fileID: 508091382}
+  helpButton: {fileID: 735748985}
   soundOffButton: {fileID: 508091381}
   shufflePanel: {fileID: 188437507}
   endingRound: 0
@@ -970,7 +972,7 @@ MonoBehaviour:
   scoreSpeed: 5
   scoreTarget1: 7000
   scoreTarget2: 9000
-  scoreTarget3: 12000
+  scoreTarget3: 11000
   min: 0
   sec: 0
 --- !u!4 &1430911293

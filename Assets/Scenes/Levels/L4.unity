@@ -235,6 +235,7 @@ MonoBehaviour:
   nextButton: {fileID: 98440947}
   pauseButton: {fileID: 1710398581}
   soundButton: {fileID: 114847589}
+  helpButton: {fileID: 9018658553299335414}
   soundOffButton: {fileID: 1119683441}
   shufflePanel: {fileID: 690136398}
   endingRound: 0
@@ -464,10 +465,10 @@ MonoBehaviour:
   leafSpeed: 7
   matchFind: {fileID: 0}
   currentState: 1
-  spider: {fileID: 6781709933695143702, guid: 8a085c3f1028ddb439f6e40682fc55cb, type: 3}
-  spiderChance: 3
+  spider: {fileID: 6781709933695143702, guid: 534e40963f8d244348fc19ebe1e89479, type: 3}
+  spiderChance: 2
   roundMan: {fileID: 0}
-  bonusAmount: 0.5
+  bonusAmount: 0.75
 --- !u!4 &690136400
 Transform:
   m_ObjectHideFlags: 0
@@ -918,6 +919,10 @@ PrefabInstance:
       propertyPath: m_RootOrder
       value: 15
       objectReference: {fileID: 0}
+    - target: {fileID: 8517005522553287806, guid: afa92de8a987d5c47a810338b6e046b7, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8728563127722167793, guid: afa92de8a987d5c47a810338b6e046b7, type: 3}
       propertyPath: m_RootOrder
       value: 10
@@ -1070,5 +1075,10 @@ MonoBehaviour:
 --- !u!1 &9018658553299335413 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3671000943353460190, guid: afa92de8a987d5c47a810338b6e046b7, type: 3}
+  m_PrefabInstance: {fileID: 9018658553299335411}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &9018658553299335414 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 604383669980343706, guid: afa92de8a987d5c47a810338b6e046b7, type: 3}
   m_PrefabInstance: {fileID: 9018658553299335411}
   m_PrefabAsset: {fileID: 0}

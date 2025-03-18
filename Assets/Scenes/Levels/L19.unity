@@ -123,6 +123,11 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &33676241 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 604383669980343706, guid: afa92de8a987d5c47a810338b6e046b7, type: 3}
+  m_PrefabInstance: {fileID: 9018658553299335411}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &98440947 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 9018658553336950272, guid: afa92de8a987d5c47a810338b6e046b7, type: 3}
@@ -230,6 +235,7 @@ MonoBehaviour:
   nextButton: {fileID: 98440947}
   pauseButton: {fileID: 9018658553299335416}
   soundButton: {fileID: 9018658553299335415}
+  helpButton: {fileID: 33676241}
   soundOffButton: {fileID: 9018658553299335414}
   shufflePanel: {fileID: 690136398}
   endingRound: 0

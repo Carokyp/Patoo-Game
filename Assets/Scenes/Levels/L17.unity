@@ -230,6 +230,7 @@ MonoBehaviour:
   nextButton: {fileID: 98440947}
   pauseButton: {fileID: 9018658553299335416}
   soundButton: {fileID: 9018658553299335415}
+  helpButton: {fileID: 1128124068}
   soundOffButton: {fileID: 9018658553299335414}
   shufflePanel: {fileID: 690136398}
   endingRound: 0
@@ -695,6 +696,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d422818012efcef41b2fe29d194b4032, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &1128124068 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 604383669980343706, guid: afa92de8a987d5c47a810338b6e046b7, type: 3}
+  m_PrefabInstance: {fileID: 9018658553299335411}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1547500314 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 9018658551887627241, guid: afa92de8a987d5c47a810338b6e046b7, type: 3}

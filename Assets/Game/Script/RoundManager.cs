@@ -15,6 +15,7 @@ public class RoundManager : MonoBehaviour
     public GameObject nextButton;
     public GameObject pauseButton;
     public GameObject soundButton;
+    public GameObject helpButton;
     public GameObject soundOffButton;
     public GameObject shufflePanel;
 
@@ -96,6 +97,7 @@ public class RoundManager : MonoBehaviour
         pauseButton.SetActive(false);
         soundButton.SetActive(false);
         soundOffButton.SetActive(false);
+        helpButton.SetActive(false);
 
         uiMan.winScore.text = currentScore.ToString();
 
@@ -171,6 +173,7 @@ public class RoundManager : MonoBehaviour
             pauseButton.SetActive(false);
             soundButton.SetActive(false);
             soundOffButton.SetActive(false);
+            helpButton.SetActive(false);
 
             replayButton.SetActive(true);
 
