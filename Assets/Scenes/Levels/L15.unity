@@ -447,7 +447,11 @@ MonoBehaviour:
   matchFind: {fileID: 0}
   currentState: 1
   spider: {fileID: 2800915970593423147, guid: 9d63ad74cd61c4b609f1854016fd6d03, type: 3}
+  superLeaf: {fileID: -2666855759042507733, guid: f9972594d7e7f284daaf29714707d740, type: 3}
+  woodblock: {fileID: -8365905124348521372, guid: ea065b1571928a1459898307f82c91af, type: 3}
   spiderChance: 1.5
+  superLeafChance: 0
+  woodblockChance: 0
   roundMan: {fileID: 0}
   bonusAmount: 1
 --- !u!4 &690136400
@@ -597,7 +601,9 @@ MonoBehaviour:
   availableMatches: 0
   woodLevel: 0
   shuffleCounter: 0
-  woodBlockSprite: []
+  woodBlockSprite:
+  - {fileID: 21300000, guid: 4c9513198f734d24a8d8e02dca583ccc, type: 3}
+  - {fileID: 21300000, guid: 4e0dc35d61e1f6748a45210273033d57, type: 3}
   blocksToCrack: []
   checkPossibleMatches: []
 --- !u!4 &1047767097
@@ -857,11 +863,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1449072606532661230, guid: afa92de8a987d5c47a810338b6e046b7, type: 3}
       propertyPath: m_RootOrder
-      value: 7
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2945610024636511442, guid: afa92de8a987d5c47a810338b6e046b7, type: 3}
       propertyPath: m_RootOrder
-      value: 10
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 3019837172504304203, guid: afa92de8a987d5c47a810338b6e046b7, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
@@ -873,7 +879,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3098367038769699390, guid: afa92de8a987d5c47a810338b6e046b7, type: 3}
       propertyPath: m_RootOrder
-      value: 14
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 3413575703594975010, guid: afa92de8a987d5c47a810338b6e046b7, type: 3}
+      propertyPath: m_RootOrder
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 3671000943353460190, guid: afa92de8a987d5c47a810338b6e046b7, type: 3}
       propertyPath: m_IsActive
@@ -881,7 +891,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5054768752777122107, guid: afa92de8a987d5c47a810338b6e046b7, type: 3}
       propertyPath: m_RootOrder
-      value: 13
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 5192158899112050186, guid: afa92de8a987d5c47a810338b6e046b7, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
@@ -893,19 +903,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6407038416174539116, guid: afa92de8a987d5c47a810338b6e046b7, type: 3}
       propertyPath: m_RootOrder
-      value: 6
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 7188478706547635329, guid: afa92de8a987d5c47a810338b6e046b7, type: 3}
       propertyPath: m_RootOrder
-      value: 8
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7673649743360497067, guid: afa92de8a987d5c47a810338b6e046b7, type: 3}
       propertyPath: m_RootOrder
-      value: 9
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 8341380191801083457, guid: afa92de8a987d5c47a810338b6e046b7, type: 3}
       propertyPath: m_RootOrder
-      value: 15
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 9018658551887627241, guid: afa92de8a987d5c47a810338b6e046b7, type: 3}
       propertyPath: m_IsActive
@@ -1007,6 +1017,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 9018658553132026258, guid: afa92de8a987d5c47a810338b6e046b7, type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 9018658553299335414, guid: afa92de8a987d5c47a810338b6e046b7, type: 3}
       propertyPath: levelToReplay
       value: 17
@@ -1029,11 +1043,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9018658553537428319, guid: afa92de8a987d5c47a810338b6e046b7, type: 3}
       propertyPath: m_RootOrder
-      value: 11
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 9018658553845835526, guid: afa92de8a987d5c47a810338b6e046b7, type: 3}
       propertyPath: m_RootOrder
-      value: 12
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 9018658553845835527, guid: afa92de8a987d5c47a810338b6e046b7, type: 3}
       propertyPath: m_IsActive

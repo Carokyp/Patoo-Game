@@ -21,14 +21,7 @@ public class BoardLayout : MonoBehaviour
                 {
                     if (allRows[y].leafsInRow[x] != null)
                     {
-                       /* if (allRows[y].leafToFreeze != null)
-                        {
-                            for (int i = 0; i < allRows[y].leafToFreeze.Length; i++)
-                            {
-                                allRows[y].leafsInRow[allRows[y].fre      leafToFreeze[i].
-
-                            }
-                        }*/
+                      
                         theLayout[x, allRows.Length - 1 - y] = allRows[y].leafsInRow[x];
                     }
                 }

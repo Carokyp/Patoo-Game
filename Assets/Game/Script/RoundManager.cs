@@ -18,15 +18,19 @@ public class RoundManager : MonoBehaviour
     public GameObject helpButton;
     public GameObject soundOffButton;
     public GameObject shufflePanel;
+    public GameObject star1, star2, star3;
 
     public bool endingRound = false;
     private Board board;
 
     public int currentScore;
     public float displayScore;
+    public float scoreToReach1, scoreToReach2, scoreToReach3;
     public float scoreSpeed;
 
     public int scoreTarget1, scoreTarget2, scoreTarget3;
+    
+
 
     public float min;
     public float sec;
@@ -47,6 +51,9 @@ public class RoundManager : MonoBehaviour
 
     void Update()
     {
+
+        ScoreTargetCheck();
+
         if (currentScore < 0)
         {
             currentScore = 0;
@@ -86,6 +93,46 @@ public class RoundManager : MonoBehaviour
 
         displayScore = Mathf.Lerp(displayScore, currentScore, scoreSpeed * Time.deltaTime);
         uiMan.scoreText.text = displayScore.ToString("0");
+
+        
+
+    }
+
+    public void ScoreTargetCheck()
+    {
+
+
+        if (currentScore >= scoreTarget3)
+        {
+            star1.SetActive(true);
+            star2.SetActive(true);
+            star3.SetActive(true);
+
+            uiMan.scoreToReach.text = scoreToReach3.ToString("0");
+
+        }
+        else if (currentScore >= scoreTarget2)
+        {
+            star1.SetActive(true);
+            star2.SetActive(true);
+            uiMan.scoreToReach.text = scoreToReach3.ToString("0");
+        }
+        else if (currentScore >= scoreTarget1)
+        {
+            star1.SetActive(true);
+
+            uiMan.scoreToReach.text = scoreToReach2.ToString("0");
+
+        }
+        else if (currentScore < scoreTarget1)
+        {
+            
+            uiMan.scoreToReach.text = scoreToReach1.ToString("0");
+
+        }
+
+
+
 
     }
 

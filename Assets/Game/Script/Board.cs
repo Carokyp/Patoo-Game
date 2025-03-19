@@ -23,9 +23,12 @@ public class Board : MonoBehaviour
     public BoardState currentState = BoardState.move;
 
     public Leaf spider;
+    public Leaf superLeaf;
+    public Leaf woodblock;
     public float spiderChance = 2f;
+    public float superLeafChance = 0f;
+    public float woodblockChance = 0f;
 
-  
 
     [HideInInspector]
     public RoundManager roundMan;
@@ -121,6 +124,17 @@ public class Board : MonoBehaviour
            
         }
 
+        if (Random.Range(0f, 100f) < superLeafChance)
+        {
+            leafToSpawn = superLeaf;
+
+        }
+
+        if (Random.Range(0f, 100f) < woodblockChance)
+        {
+            leafToSpawn = woodblock;
+
+        }
 
         Leaf leaf = Instantiate(leafToSpawn, new Vector3(pos.x, pos.y + height, 0f), Quaternion.identity);
         leaf.transform.parent = transform;
@@ -129,6 +143,7 @@ public class Board : MonoBehaviour
 
         leaf.SetupLeaf(pos, this);
     }
+
 
     private void NoSpawnLeaf(Vector2Int pos, Leaf leafToSpawn)
     {
@@ -398,7 +413,6 @@ public class Board : MonoBehaviour
         {
             uiMan.happyDog.SetActive(false);
         }
-
   
     }
 

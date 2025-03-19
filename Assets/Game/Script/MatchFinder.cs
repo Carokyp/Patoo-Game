@@ -777,6 +777,15 @@ public class MatchFinder : MonoBehaviour
                         board.allLeafs[x, y].isMatched = true;
                         currentMatches.Add(board.allLeafs[x, y]);
 
+                        if (firstMatch == true)
+                        {
+                            uiMan.happyDog.SetActive(true);
+                        }
+                        else
+                        {
+                            uiMan.happyDog.SetActive(false);
+                        }
+
                     }
 
                 }
@@ -788,7 +797,7 @@ public class MatchFinder : MonoBehaviour
     }
 
     public IEnumerator SadDog()
-     {
+    {
           isSad = true;
           yield return new WaitForSeconds(0.2f);
           uiMan.sadDog.SetActive(true);
@@ -797,7 +806,7 @@ public class MatchFinder : MonoBehaviour
           isSad = false;
           uiMan.sadDog.SetActive(false);
 
-     }
+    }
 
     public IEnumerator NoMatch() 
     {

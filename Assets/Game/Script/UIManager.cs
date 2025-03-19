@@ -8,6 +8,7 @@ public class UIManager : MonoBehaviour
 {
     public TMP_Text timeText;
     public TMP_Text scoreText;
+    public TMP_Text scoreToReach;
 
     public TMP_Text winScore;
     public TMP_Text winText;

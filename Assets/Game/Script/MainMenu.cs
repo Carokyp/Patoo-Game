@@ -8,6 +8,8 @@ public class MainMenu : MonoBehaviour
     public string loadLevel;
     public void StarGame()
     {
+        Time.timeScale = 1;
+
         if (PlayerPrefs.GetInt("ShowDialogue") == 0)
         {
             SceneManager.LoadScene(loadLevel);
