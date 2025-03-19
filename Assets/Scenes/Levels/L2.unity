@@ -629,10 +629,6 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 247342435}
-    - target: {fileID: 6407038416174539116, guid: afa92de8a987d5c47a810338b6e046b7, type: 3}
-      propertyPath: m_RootOrder
-      value: 2
-      objectReference: {fileID: 0}
     - target: {fileID: 6606125727867880282, guid: afa92de8a987d5c47a810338b6e046b7, type: 3}
       propertyPath: m_IsActive
       value: 0
@@ -685,30 +681,6 @@ PrefabInstance:
       propertyPath: m_RootOrder
       value: 7
       objectReference: {fileID: 0}
-    - target: {fileID: 9018658551882671562, guid: afa92de8a987d5c47a810338b6e046b7, type: 3}
-      propertyPath: m_RootOrder
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 9018658551882671562, guid: afa92de8a987d5c47a810338b6e046b7, type: 3}
-      propertyPath: m_SizeDelta.x
-      value: 59.2409
-      objectReference: {fileID: 0}
-    - target: {fileID: 9018658551882671562, guid: afa92de8a987d5c47a810338b6e046b7, type: 3}
-      propertyPath: m_SizeDelta.y
-      value: 23.0386
-      objectReference: {fileID: 0}
-    - target: {fileID: 9018658551882671562, guid: afa92de8a987d5c47a810338b6e046b7, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 11.533199
-      objectReference: {fileID: 0}
-    - target: {fileID: 9018658551882671562, guid: afa92de8a987d5c47a810338b6e046b7, type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: 541
-      objectReference: {fileID: 0}
-    - target: {fileID: 9018658551882671562, guid: afa92de8a987d5c47a810338b6e046b7, type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: -436.90295
-      objectReference: {fileID: 0}
     - target: {fileID: 9018658551887627241, guid: afa92de8a987d5c47a810338b6e046b7, type: 3}
       propertyPath: m_IsActive
       value: 0
@@ -720,10 +692,6 @@ PrefabInstance:
     - target: {fileID: 9018658551887627247, guid: afa92de8a987d5c47a810338b6e046b7, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: Replay
-      objectReference: {fileID: 0}
-    - target: {fileID: 9018658552102284175, guid: afa92de8a987d5c47a810338b6e046b7, type: 3}
-      propertyPath: m_RootOrder
-      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9018658552546660636, guid: afa92de8a987d5c47a810338b6e046b7, type: 3}
       propertyPath: m_RootOrder
@@ -816,14 +784,6 @@ PrefabInstance:
     - target: {fileID: 9018658552747438329, guid: afa92de8a987d5c47a810338b6e046b7, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 9018658552806542130, guid: afa92de8a987d5c47a810338b6e046b7, type: 3}
-      propertyPath: m_RootOrder
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 9018658552806542130, guid: afa92de8a987d5c47a810338b6e046b7, type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: -140
       objectReference: {fileID: 0}
     - target: {fileID: 9018658553299335414, guid: afa92de8a987d5c47a810338b6e046b7, type: 3}
       propertyPath: levelToReplay

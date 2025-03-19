@@ -233,9 +233,15 @@ MonoBehaviour:
   helpButton: {fileID: 683815625}
   soundOffButton: {fileID: 9018658553299335414}
   shufflePanel: {fileID: 690136398}
+  star1: {fileID: 1988184597}
+  star2: {fileID: 1988184596}
+  star3: {fileID: 1988184595}
   endingRound: 0
   currentScore: 0
   displayScore: 0
+  scoreToReach1: 9000
+  scoreToReach2: 11000
+  scoreToReach3: 13000
   scoreSpeed: 5
   scoreTarget1: 9000
   scoreTarget2: 11000
@@ -772,6 +778,21 @@ Transform:
 Transform:
   m_CorrespondingSourceObject: {fileID: 1441336795498595951, guid: 1f83ee436e58840479040ae5e6cef861, type: 3}
   m_PrefabInstance: {fileID: 1441336794734379817}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1988184595 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4605542333827182340, guid: afa92de8a987d5c47a810338b6e046b7, type: 3}
+  m_PrefabInstance: {fileID: 9018658553299335411}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1988184596 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1719842400315367782, guid: afa92de8a987d5c47a810338b6e046b7, type: 3}
+  m_PrefabInstance: {fileID: 9018658553299335411}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1988184597 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 629983171794591435, guid: afa92de8a987d5c47a810338b6e046b7, type: 3}
+  m_PrefabInstance: {fileID: 9018658553299335411}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1441336794734379817
 PrefabInstance:

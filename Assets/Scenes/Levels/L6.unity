@@ -295,9 +295,15 @@ MonoBehaviour:
   helpButton: {fileID: 2035228396}
   soundOffButton: {fileID: 9018658553299335414}
   shufflePanel: {fileID: 690136398}
+  star1: {fileID: 341753790}
+  star2: {fileID: 341753789}
+  star3: {fileID: 341753788}
   endingRound: 0
   currentScore: 0
   displayScore: 0
+  scoreToReach1: 7000
+  scoreToReach2: 9000
+  scoreToReach3: 12000
   scoreSpeed: 5
   scoreTarget1: 7000
   scoreTarget2: 9000
@@ -319,6 +325,21 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &341753788 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4605542333827182340, guid: afa92de8a987d5c47a810338b6e046b7, type: 3}
+  m_PrefabInstance: {fileID: 9018658553299335411}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &341753789 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1719842400315367782, guid: afa92de8a987d5c47a810338b6e046b7, type: 3}
+  m_PrefabInstance: {fileID: 9018658553299335411}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &341753790 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 629983171794591435, guid: afa92de8a987d5c47a810338b6e046b7, type: 3}
+  m_PrefabInstance: {fileID: 9018658553299335411}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0

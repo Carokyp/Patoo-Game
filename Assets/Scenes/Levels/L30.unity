@@ -233,9 +233,15 @@ MonoBehaviour:
   helpButton: {fileID: 1821362306}
   soundOffButton: {fileID: 9018658553299335414}
   shufflePanel: {fileID: 690136398}
+  star1: {fileID: 1792482339}
+  star2: {fileID: 1792482338}
+  star3: {fileID: 1792482337}
   endingRound: 0
   currentScore: 0
   displayScore: 0
+  scoreToReach1: 9000
+  scoreToReach2: 11000
+  scoreToReach3: 13000
   scoreSpeed: 5
   scoreTarget1: 9000
   scoreTarget2: 11000
@@ -453,8 +459,10 @@ MonoBehaviour:
   currentState: 1
   spider: {fileID: 2800915970593423147, guid: 9d63ad74cd61c4b609f1854016fd6d03, type: 3}
   superLeaf: {fileID: -2666855759042507733, guid: f9972594d7e7f284daaf29714707d740, type: 3}
+  woodblock: {fileID: 0}
   spiderChance: 1
   superLeafChance: 0
+  woodblockChance: 0
   roundMan: {fileID: 0}
   bonusAmount: 1
 --- !u!4 &690136400
@@ -698,6 +706,21 @@ MonoBehaviour:
 --- !u!1 &1547500314 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 9018658551887627241, guid: afa92de8a987d5c47a810338b6e046b7, type: 3}
+  m_PrefabInstance: {fileID: 9018658553299335411}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1792482337 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4605542333827182340, guid: afa92de8a987d5c47a810338b6e046b7, type: 3}
+  m_PrefabInstance: {fileID: 9018658553299335411}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1792482338 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1719842400315367782, guid: afa92de8a987d5c47a810338b6e046b7, type: 3}
+  m_PrefabInstance: {fileID: 9018658553299335411}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1792482339 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 629983171794591435, guid: afa92de8a987d5c47a810338b6e046b7, type: 3}
   m_PrefabInstance: {fileID: 9018658553299335411}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &1821362306 stripped
