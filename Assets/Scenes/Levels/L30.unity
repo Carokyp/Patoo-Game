@@ -461,7 +461,7 @@ MonoBehaviour:
   superLeaf: {fileID: -2666855759042507733, guid: f9972594d7e7f284daaf29714707d740, type: 3}
   woodblock: {fileID: 0}
   spiderChance: 1
-  superLeafChance: 0
+  superLeafChance: 4
   woodblockChance: 0
   roundMan: {fileID: 0}
   bonusAmount: 1
