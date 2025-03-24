@@ -7,7 +7,7 @@ using UnityEngine.SceneManagement;
 public class RoundManager : MonoBehaviour
 {
     public float roundTime = 60f;
-    private UIManager uiMan;
+    public UIManager uiMan;
 
     private LevelManager levelManager;
 
@@ -36,17 +36,20 @@ public class RoundManager : MonoBehaviour
     public float sec;
 
     private bool hasAddBeenShowed = false;
-
-
    
     
     void Awake()
     {
-        Time.timeScale = 1;
-        uiMan = FindObjectOfType<UIManager>();
+       
         board = FindObjectOfType<Board>();
         levelManager = FindObjectOfType<LevelManager>();
            
+    }
+
+    private void Start()
+    {
+        Time.timeScale = 1;
+        
     }
 
     void Update()
