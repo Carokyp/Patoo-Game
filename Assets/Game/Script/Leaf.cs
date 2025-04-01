@@ -39,22 +39,25 @@ public class Leaf : MonoBehaviour
         matchFind = FindObjectOfType<MatchFinder>();    
     }
 
+    public float resizeRatio;
 
     void Start()
     {
-        
+       
     }
 
    
     void Update()
     {
-        if (Vector2.Distance(transform.position, posIndex) > .01f)
+        Vector2 newPos = posIndex;
+        newPos *= resizeRatio;
+        if (Vector2.Distance(transform.position, newPos) > .01f)
         {
-            transform.position = Vector2.Lerp(transform.position, posIndex, board.leafSpeed * Time.deltaTime);
+            transform.position = Vector2.Lerp(transform.position, newPos, board.leafSpeed * Time.deltaTime);
         }
         else
         {
-            transform.position = new Vector3(posIndex.x, posIndex.y, 0f);
+            transform.position = new Vector3(newPos.x, newPos.y, 0f);
             board.allLeafs[posIndex.x, posIndex.y] = this;
         }
         
@@ -72,11 +75,13 @@ public class Leaf : MonoBehaviour
         }
     }
 
-    public void SetupLeaf(Vector2Int pos, Board theBoard) 
+    public void SetupLeaf(Vector2Int pos, float ratio, Board theBoard) 
     {
 
         posIndex = pos;
         board = theBoard;
+
+        resizeRatio = ratio;
     
     }
 

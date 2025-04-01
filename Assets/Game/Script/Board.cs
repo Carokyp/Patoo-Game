@@ -40,6 +40,8 @@ public class Board : MonoBehaviour
     private BoardLayout boardLayout;
     private Leaf[,] layoutStore;
 
+    public float resizeRatio;
+
 
     private void Awake()
     {
@@ -55,6 +57,8 @@ public class Board : MonoBehaviour
         allLeafs = new Leaf[width, height];
 
         layoutStore = new Leaf[width, height];
+
+        resizeRatio = transform.localScale.x;
 
         Setup();
 
@@ -78,9 +82,10 @@ public class Board : MonoBehaviour
             for (int y = 0; y < height; y++)
             {
 
-                Vector2 pos = new Vector2(x, y);
+                Vector2 pos = new Vector2(x, y) * resizeRatio;
                 GameObject bgTile = Instantiate(bgTilePrefab, pos, Quaternion.identity);
                 bgTile.transform.parent = transform;
+                bgTile.transform.localScale *= resizeRatio;
                 bgTile.name = "BG Tile - " + x + " , " + y;
 
                 if (layoutStore[x, y] != null)
@@ -136,12 +141,15 @@ public class Board : MonoBehaviour
 
         }
 
-        Leaf leaf = Instantiate(leafToSpawn, new Vector3(pos.x, pos.y + height, 0f), Quaternion.identity);
-        leaf.transform.parent = transform;
+        Vector2 newPos = pos;
+        newPos *= resizeRatio;
+        Leaf leaf = Instantiate(leafToSpawn, new Vector3(newPos.x, newPos.y + (height * resizeRatio), 0f) , Quaternion.identity, transform);
+        //leaf.transform.parent = transform;
+        //leaf.transform.localScale *= transform.localScale.x;
         leaf.name = "Leaf - " + pos.x + " , " + pos.y;
         allLeafs[pos.x, pos.y] = leaf;
 
-        leaf.SetupLeaf(pos, this);
+        leaf.SetupLeaf(pos, resizeRatio, this);
     }
 
 
@@ -149,13 +157,15 @@ public class Board : MonoBehaviour
     {
 
 
-
-        Leaf leaf = Instantiate(leafToSpawn, new Vector3(pos.x, pos.y + height, 0f), Quaternion.identity);
-        leaf.transform.parent = transform;
+        Vector2 newPos = pos;
+        newPos *= resizeRatio;
+        Leaf leaf = Instantiate(leafToSpawn, new Vector3(newPos.x, newPos.y + (height * resizeRatio), 0), Quaternion.identity, transform);
+        //leaf.transform.parent = transform;
+        //leaf.transform.localScale *= transform.localScale.x;
         leaf.name = "Leaf - " + pos.x + " , " + pos.y;
         allLeafs[pos.x, pos.y] = leaf;
 
-        leaf.SetupLeaf(pos, this);
+        leaf.SetupLeaf(pos,resizeRatio, this);
 
        
     }
@@ -199,8 +209,8 @@ public class Board : MonoBehaviour
                     SFXManager.instance.PlayLeafMatch();
                 }
 
-                Instantiate(allLeafs[pos.x, pos.y].destroyEffect, new Vector2(pos.x, pos.y), Quaternion.identity);
-
+                GameObject effect = Instantiate(allLeafs[pos.x, pos.y].destroyEffect, new Vector2(pos.x, pos.y) * transform.localScale.x, Quaternion.identity);
+                effect.transform.localScale *= transform.localScale.x;
                 Destroy(allLeafs[pos.x, pos.y].gameObject);
                 allLeafs[pos.x, pos.y] = null;
             }
@@ -226,8 +236,8 @@ public class Board : MonoBehaviour
                     SFXManager.instance.PlayLeafMatch();
                 }
 
-                Instantiate(allLeafs[pos.x, pos.y].destroyEffect, new Vector2(pos.x, pos.y), Quaternion.identity);
-
+                GameObject effect = Instantiate(allLeafs[pos.x, pos.y].destroyEffect, new Vector2(pos.x, pos.y) * transform.localScale.x, Quaternion.identity);
+                effect.transform.localScale *= transform.localScale.x;
                 Destroy(allLeafs[pos.x, pos.y].gameObject);
                 allLeafs[pos.x, pos.y] = null;
 
@@ -494,7 +504,7 @@ public class Board : MonoBehaviour
 
                     }
 
-                    leafsFromBoard[leafToUse].SetupLeaf(new Vector2Int(x, y), this);
+                    leafsFromBoard[leafToUse].SetupLeaf(new Vector2Int(x, y), resizeRatio, this);
                     allLeafs[x, y] = leafsFromBoard[leafToUse]; 
 
 

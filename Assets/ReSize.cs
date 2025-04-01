@@ -4,26 +4,33 @@ using UnityEngine;
 
 public class ReSize : MonoBehaviour
 {
-    public Vector2 screeSize;
+    public Vector2 screenSize;
     public Vector2 refSize;
+    public float ratio;
+    public float refRatio;
+    public float percentage;
 
     private void Awake()
     {
-        screeSize.x = Camera.main.pixelWidth;
-        screeSize.y = Camera.main.pixelHeight;
-        // screeSize = Camera.main.ScreenToWorldPoint(screeSize);
+        
+        
 
         
     }
 
     void Start()
     {
-        transform.localScale = new Vector3(screeSize.x/refSize.x, screeSize.y/refSize.y,1);
+        transform.localScale = new Vector3(screenSize.x/refSize.x, screenSize.y/refSize.y,1);
     }
 
     
     void Update()
     {
-        
+        screenSize.x = Camera.main.pixelWidth;
+        screenSize.y = Camera.main.pixelHeight;
+
+        ratio = Mathf.Lerp(screenSize.x / screenSize.y, screenSize.y / screenSize.x, percentage);
+        refRatio = Mathf.Lerp(refSize.x / refSize.y, refSize.y / refSize.x, percentage);
+        transform.localScale = Vector3.one * ratio / refRatio;
     }
 }
