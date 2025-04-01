@@ -103,10 +103,11 @@ MonoBehaviour:
   type: 8
   isMatched: 0
   destroyEffect: {fileID: 9083038517896977231, guid: aace7b4b7634f2646866a72caef20e72, type: 3}
-  blastSize: 2
+  blastSize: 0
   scoreValue: 0
   matchFind: {fileID: 0}
   freezePosition: 0
+  resizeRatio: 0
 --- !u!61 &3807878937335864383
 BoxCollider2D:
   m_ObjectHideFlags: 0

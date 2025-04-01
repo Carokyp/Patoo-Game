@@ -243,6 +243,7 @@ MonoBehaviour:
   woodblockChance: 1
   roundMan: {fileID: 0}
   bonusAmount: 1
+  resizeRatio: 0
 --- !u!4 &188437509
 Transform:
   m_ObjectHideFlags: 0
@@ -990,12 +991,12 @@ MonoBehaviour:
   currentScore: 0
   displayScore: 0
   scoreToReach1: 7000
-  scoreToReach2: 9000
-  scoreToReach3: 11000
+  scoreToReach2: 10000
+  scoreToReach3: 13000
   scoreSpeed: 5
   scoreTarget1: 7000
-  scoreTarget2: 9000
-  scoreTarget3: 11000
+  scoreTarget2: 10000
+  scoreTarget3: 13000
   min: 0
   sec: 0
 --- !u!4 &1430911293
