@@ -225,7 +225,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: be315dc64c3634442b9666b8d913f713, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  roundTime: 210
+  roundTime: 170
+  uiMan: {fileID: 2115423195}
   replayButton: {fileID: 1547500314}
   nextButton: {fileID: 98440947}
   pauseButton: {fileID: 9018658553299335416}
@@ -239,13 +240,13 @@ MonoBehaviour:
   endingRound: 0
   currentScore: 0
   displayScore: 0
-  scoreToReach1: 8000
-  scoreToReach2: 10000
-  scoreToReach3: 12000
+  scoreToReach1: 9000
+  scoreToReach2: 12000
+  scoreToReach3: 15000
   scoreSpeed: 5
-  scoreTarget1: 8000
-  scoreTarget2: 10000
-  scoreTarget3: 12000
+  scoreTarget1: 9000
+  scoreTarget2: 12000
+  scoreTarget3: 15000
   min: 0
   sec: 0
 --- !u!4 &309724714
@@ -457,14 +458,15 @@ MonoBehaviour:
   leafSpeed: 7
   matchFind: {fileID: 0}
   currentState: 1
-  spider: {fileID: 2800915970593423147, guid: 9d63ad74cd61c4b609f1854016fd6d03, type: 3}
+  spider: {fileID: 6781709933695143702, guid: 534e40963f8d244348fc19ebe1e89479, type: 3}
   superLeaf: {fileID: -2666855759042507733, guid: f9972594d7e7f284daaf29714707d740, type: 3}
   woodblock: {fileID: -8365905124348521372, guid: ea065b1571928a1459898307f82c91af, type: 3}
   spiderChance: 1.5
-  superLeafChance: 0
-  woodblockChance: 0
+  superLeafChance: 1
+  woodblockChance: 1
   roundMan: {fileID: 0}
   bonusAmount: 1
+  resizeRatio: 0
 --- !u!4 &690136400
 Transform:
   m_ObjectHideFlags: 0
@@ -796,6 +798,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 1441336795498595951, guid: 1f83ee436e58840479040ae5e6cef861, type: 3}
   m_PrefabInstance: {fileID: 1441336794734379817}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &2115423195 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 9018658552747438328, guid: afa92de8a987d5c47a810338b6e046b7, type: 3}
+  m_PrefabInstance: {fileID: 9018658553299335411}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0dd64b73f0a355f43b37a87f9572c448, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1441336794734379817
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -943,6 +956,18 @@ PrefabInstance:
     - target: {fileID: 8341380191801083457, guid: afa92de8a987d5c47a810338b6e046b7, type: 3}
       propertyPath: m_RootOrder
       value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 8517005522553287806, guid: afa92de8a987d5c47a810338b6e046b7, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8910021408355710689, guid: afa92de8a987d5c47a810338b6e046b7, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -271
+      objectReference: {fileID: 0}
+    - target: {fileID: 8910021408355710689, guid: afa92de8a987d5c47a810338b6e046b7, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 47
       objectReference: {fileID: 0}
     - target: {fileID: 9018658551887627241, guid: afa92de8a987d5c47a810338b6e046b7, type: 3}
       propertyPath: m_IsActive

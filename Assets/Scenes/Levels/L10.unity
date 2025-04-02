@@ -241,11 +241,11 @@ MonoBehaviour:
   currentScore: 0
   displayScore: 0
   scoreToReach1: 9000
-  scoreToReach2: 10000
+  scoreToReach2: 11000
   scoreToReach3: 13000
   scoreSpeed: 5
   scoreTarget1: 9000
-  scoreTarget2: 10000
+  scoreTarget2: 11000
   scoreTarget3: 13000
   min: 0
   sec: 0
@@ -471,7 +471,7 @@ MonoBehaviour:
   superLeafChance: 0.6
   woodblockChance: 1
   roundMan: {fileID: 0}
-  bonusAmount: 1
+  bonusAmount: 0.75
   resizeRatio: 0
 --- !u!4 &690136400
 Transform:

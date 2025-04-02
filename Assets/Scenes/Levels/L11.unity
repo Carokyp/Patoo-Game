@@ -128,6 +128,17 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 9018658553336950272, guid: afa92de8a987d5c47a810338b6e046b7, type: 3}
   m_PrefabInstance: {fileID: 9018658553299335411}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &301922929 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 9018658552747438328, guid: afa92de8a987d5c47a810338b6e046b7, type: 3}
+  m_PrefabInstance: {fileID: 9018658553299335411}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0dd64b73f0a355f43b37a87f9572c448, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &305702084
 GameObject:
   m_ObjectHideFlags: 0
@@ -226,6 +237,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   roundTime: 180
+  uiMan: {fileID: 301922929}
   replayButton: {fileID: 1547500314}
   nextButton: {fileID: 98440947}
   pauseButton: {fileID: 9018658553299335416}
@@ -239,13 +251,13 @@ MonoBehaviour:
   endingRound: 0
   currentScore: 0
   displayScore: 0
-  scoreToReach1: 7500
-  scoreToReach2: 10000
-  scoreToReach3: 12000
+  scoreToReach1: 9000
+  scoreToReach2: 12000
+  scoreToReach3: 14000
   scoreSpeed: 5
-  scoreTarget1: 7500
-  scoreTarget2: 10000
-  scoreTarget3: 12000
+  scoreTarget1: 9000
+  scoreTarget2: 12000
+  scoreTarget3: 14000
   min: 0
   sec: 0
 --- !u!4 &309724714
@@ -455,11 +467,12 @@ MonoBehaviour:
   spider: {fileID: 7640344213895503695, guid: 5e2d36e130abdef47a1bbf875c21a7b3, type: 3}
   superLeaf: {fileID: -2666855759042507733, guid: f9972594d7e7f284daaf29714707d740, type: 3}
   woodblock: {fileID: -8365905124348521372, guid: ea065b1571928a1459898307f82c91af, type: 3}
-  spiderChance: 2
+  spiderChance: 2.5
   superLeafChance: 0.5
-  woodblockChance: 0
+  woodblockChance: 1
   roundMan: {fileID: 0}
-  bonusAmount: 0.5
+  bonusAmount: 1
+  resizeRatio: 0
 --- !u!4 &690136400
 Transform:
   m_ObjectHideFlags: 0
