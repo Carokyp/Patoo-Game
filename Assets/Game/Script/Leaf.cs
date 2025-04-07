@@ -34,6 +34,8 @@ public class Leaf : MonoBehaviour
 
     public bool freezePosition = false;
 
+    public Vector2 currentPos;
+
     private void Awake()
     {
         matchFind = FindObjectOfType<MatchFinder>();    
@@ -43,17 +45,27 @@ public class Leaf : MonoBehaviour
 
     void Start()
     {
-       
+        
     }
 
    
     void Update()
     {
+        resizeRatio = transform.parent.transform.parent.localScale.x;
         Vector2 newPos = posIndex;
-        newPos *= resizeRatio;
+        newPos.x *= resizeRatio;
+        newPos.y *= resizeRatio;
+        //newPos.y -= 0.67f;
+
+
+
+
         if (Vector2.Distance(transform.position, newPos) > .01f)
         {
+            currentPos = transform.position;
             transform.position = Vector2.Lerp(transform.position, newPos, board.leafSpeed * Time.deltaTime);
+            
+           
         }
         else
         {

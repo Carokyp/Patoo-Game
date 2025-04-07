@@ -42,6 +42,7 @@ public class Board : MonoBehaviour
 
     public float resizeRatio;
 
+    public Vector3 hight;
 
     private void Awake()
     {
@@ -49,18 +50,26 @@ public class Board : MonoBehaviour
         matchFind = FindObjectOfType<MatchFinder>();
         roundMan = FindObjectOfType<RoundManager>();
         boardLayout = GetComponent<BoardLayout>();
-        
-    }
 
-    void Start()
-    {
         allLeafs = new Leaf[width, height];
 
         layoutStore = new Leaf[width, height];
 
-        resizeRatio = transform.localScale.x;
+        resizeRatio = transform.parent.localScale.x;
 
         Setup();
+
+    }
+
+    void Start()
+    {
+       /* allLeafs = new Leaf[width, height];
+
+        layoutStore = new Leaf[width, height];
+
+        resizeRatio = transform.parent.localScale.x; 
+
+        Setup();*/
 
     }
 
@@ -119,8 +128,11 @@ public class Board : MonoBehaviour
             }
         }
 
+        /*hight = transform.localPosition;
+        hight.y *= resizeRatio;
+        transform.localPosition = hight;*/
     }
-
+    
     private void SpawnLeaf(Vector2Int pos, Leaf leafToSpawn)
     {
         if (Random.Range(0f,100f) < spiderChance)
@@ -142,10 +154,13 @@ public class Board : MonoBehaviour
         }
 
         Vector2 newPos = pos;
+
         newPos *= resizeRatio;
+
         Leaf leaf = Instantiate(leafToSpawn, new Vector3(newPos.x, newPos.y + (height * resizeRatio), 0f) , Quaternion.identity, transform);
         //leaf.transform.parent = transform;
         //leaf.transform.localScale *= transform.localScale.x;
+        
         leaf.name = "Leaf - " + pos.x + " , " + pos.y;
         allLeafs[pos.x, pos.y] = leaf;
 
