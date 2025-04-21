@@ -45,17 +45,18 @@ public class Leaf : MonoBehaviour
 
     void Start()
     {
+        resizeRatio = transform.parent.transform.parent.localScale.x;
         
     }
 
    
     void Update()
     {
-        resizeRatio = transform.parent.transform.parent.localScale.x;
+        
         Vector2 newPos = posIndex;
         newPos.x *= resizeRatio;
         newPos.y *= resizeRatio;
-        //newPos.y -= 0.67f;
+        
 
 
 

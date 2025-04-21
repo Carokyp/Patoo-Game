@@ -38,5 +38,5 @@ public class BoardLayout : MonoBehaviour
 public class LayoutRow 
 {
     public Leaf[] leafsInRow;
-    //public int[] leafToFreeze;
+    
 }

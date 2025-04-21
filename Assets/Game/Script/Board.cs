@@ -83,9 +83,11 @@ public class Board : MonoBehaviour
 
         if (boardLayout != null)
         {
-            layoutStore = boardLayout.GetLayout();
+           layoutStore = boardLayout.GetLayout();
         }
-
+       
+       
+     
         for (int x = 0; x < width; x++)
         {
             for (int y = 0; y < height; y++)
