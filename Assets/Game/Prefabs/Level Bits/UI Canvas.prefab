@@ -6346,6 +6346,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2418682108220640648, guid: c0b096c85776bb64f9b9b51fc478c9d6, type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3859410144444358637, guid: c0b096c85776bb64f9b9b51fc478c9d6, type: 3}
       propertyPath: m_Name
       value: 'Pause Button '

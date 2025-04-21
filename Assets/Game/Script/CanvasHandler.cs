@@ -28,7 +28,7 @@ public class CanvasHandler : MonoBehaviour
 
         switch (ratio)
         {
-            case < 1.4f:
+            case < 1.5f:
                 canvas[2].SetActive(true);
                 roundManager.uiMan = canvas[2].GetComponent<UIManager>();
                 break;

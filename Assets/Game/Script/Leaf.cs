@@ -36,6 +36,8 @@ public class Leaf : MonoBehaviour
 
     public Vector2 currentPos;
 
+    public Vector2 offSet;
+
     private void Awake()
     {
         matchFind = FindObjectOfType<MatchFinder>();    
@@ -45,21 +47,20 @@ public class Leaf : MonoBehaviour
 
     void Start()
     {
-        resizeRatio = transform.parent.transform.parent.localScale.x;
+        
         
     }
 
    
     void Update()
     {
-        
+        resizeRatio = transform.parent.transform.parent.localScale.x;
         Vector2 newPos = posIndex;
-        newPos.x *= resizeRatio;
-        newPos.y *= resizeRatio;
+        newPos *= resizeRatio;
+        offSet = Camera.main.transform.position;
+        offSet = (offSet * resizeRatio) - offSet;
+        newPos -= offSet;
         
-
-
-
 
         if (Vector2.Distance(transform.position, newPos) > .01f)
         {

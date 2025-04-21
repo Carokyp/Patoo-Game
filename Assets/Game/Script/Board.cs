@@ -51,25 +51,17 @@ public class Board : MonoBehaviour
         roundMan = FindObjectOfType<RoundManager>();
         boardLayout = GetComponent<BoardLayout>();
 
-        allLeafs = new Leaf[width, height];
-
-        layoutStore = new Leaf[width, height];
-
-        resizeRatio = transform.parent.localScale.x;
-
-        Setup();
-
     }
 
     void Start()
     {
-       /* allLeafs = new Leaf[width, height];
+        allLeafs = new Leaf[width, height];
 
         layoutStore = new Leaf[width, height];
 
         resizeRatio = transform.parent.localScale.x; 
 
-        Setup();*/
+        Setup();
 
     }
 
@@ -92,8 +84,13 @@ public class Board : MonoBehaviour
         {
             for (int y = 0; y < height; y++)
             {
+                Vector2 offSet;
+                offSet = Camera.main.transform.position;
+                offSet = (offSet * resizeRatio) - offSet;
 
                 Vector2 pos = new Vector2(x, y) * resizeRatio;
+                pos -= offSet;
+
                 GameObject bgTile = Instantiate(bgTilePrefab, pos, Quaternion.identity);
                 bgTile.transform.parent = transform;
                 bgTile.transform.localScale *= resizeRatio;
