@@ -17,6 +17,14 @@ public class UIManager : MonoBehaviour
     public GameObject happyDog,sadDog;
     public GameObject lostPanel;
 
+    public GameObject replayButton;
+    public GameObject nextButton;
+    public GameObject pauseButton;
+    public GameObject soundButton;
+    public GameObject helpButton;
+    public GameObject soundOffButton;
+    public GameObject shufflePanel;
+
 
     public GameObject roundOverScreen;
 

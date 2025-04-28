@@ -30,10 +30,9 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 2365665861771219005}
+  m_Children: []
   m_Father: {fileID: 9018658552747438329}
-  m_RootOrder: 9
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -2650,7 +2649,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &2365665861771219005
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2678,13 +2677,13 @@ RectTransform:
   - {fileID: 5188925814017765313}
   - {fileID: 7738444153494022161}
   - {fileID: 7810369960094567958}
-  m_Father: {fileID: 3413575703594975010}
-  m_RootOrder: 0
+  m_Father: {fileID: 9018658552747438329}
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 817.69006, y: 332.40784}
-  m_SizeDelta: {x: 907.6672, y: 471.66418}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0.001865, y: -0.99998}
+  m_SizeDelta: {x: 1007.6672, y: 571.6642}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &2389408709637784848
 CanvasRenderer:
@@ -3645,9 +3644,10 @@ RectTransform:
   - {fileID: 2945610024636511442}
   - {fileID: 3098367038769699390}
   - {fileID: 8341380191801083457}
-  - {fileID: 9018658553845835526}
   - {fileID: 5054768752777122107}
   - {fileID: 3413575703594975010}
+  - {fileID: 2365665861771219005}
+  - {fileID: 9018658553845835526}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -5410,7 +5410,7 @@ RectTransform:
   - {fileID: 9018658551887627240}
   - {fileID: 6589694849892301340}
   m_Father: {fileID: 9018658552747438329}
-  m_RootOrder: 7
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
@@ -5625,7 +5625,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 72
+  m_fontSize: 68.2
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -6528,7 +6528,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 411676706022716589, guid: f386fee90390df340b4644f9fa7a96e5, type: 3}
       propertyPath: m_RootOrder
-      value: 8
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 411676706022716589, guid: f386fee90390df340b4644f9fa7a96e5, type: 3}
       propertyPath: m_AnchorMax.x

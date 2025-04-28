@@ -143,11 +143,11 @@ public class RoundManager : MonoBehaviour
     {
 
         uiMan.roundOverScreen.SetActive(true);
-
-        pauseButton.SetActive(false);
-        soundButton.SetActive(false);
-        soundOffButton.SetActive(false);
-        helpButton.SetActive(false);
+        
+        uiMan.pauseButton.SetActive(false);
+        uiMan.soundButton.SetActive(false);
+        uiMan.soundOffButton.SetActive(false);
+        uiMan.helpButton.SetActive(false);
 
         uiMan.winScore.text = currentScore.ToString();
 
