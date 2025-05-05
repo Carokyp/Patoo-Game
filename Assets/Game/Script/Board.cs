@@ -14,7 +14,7 @@ public class Board : MonoBehaviour
 
     public float leafSpeed;
 
-    private UIManager uiMan;
+    public UIManager uiMan;
 
     [HideInInspector]
     public MatchFinder matchFind;

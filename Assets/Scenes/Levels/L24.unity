@@ -242,6 +242,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   roundTime: 200
   uiMan: {fileID: 1840845669}
+  levelManager: {fileID: 0}
   replayButton: {fileID: 1547500314}
   nextButton: {fileID: 98440947}
   pauseButton: {fileID: 9018658553299335416}
@@ -466,6 +467,7 @@ MonoBehaviour:
   - {fileID: -3305818568112437277, guid: 20b7c1ed020c62b4f8dd070bfc5a33b3, type: 3}
   - {fileID: 7568174617729065683, guid: a482e78d42239d44392380a0e2c51d80, type: 3}
   leafSpeed: 7
+  uiMan: {fileID: 0}
   matchFind: {fileID: 0}
   currentState: 1
   spider: {fileID: 2800915970593423147, guid: 9d63ad74cd61c4b609f1854016fd6d03, type: 3}
@@ -619,6 +621,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 682b4e04a15baa24aa6179b2b5da4697, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  uiMan: {fileID: 0}
   isSad: 0
   noMatchPanel: {fileID: 9018658553299335413}
   currentMatches: []
@@ -927,6 +930,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 629983171794591435, guid: afa92de8a987d5c47a810338b6e046b7, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 919356979513766152, guid: afa92de8a987d5c47a810338b6e046b7, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
@@ -937,6 +944,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1449072606532661230, guid: afa92de8a987d5c47a810338b6e046b7, type: 3}
       propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1719842400315367782, guid: afa92de8a987d5c47a810338b6e046b7, type: 3}
+      propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2945610024636511442, guid: afa92de8a987d5c47a810338b6e046b7, type: 3}
@@ -963,9 +974,13 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4605542333827182340, guid: afa92de8a987d5c47a810338b6e046b7, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5054768752777122107, guid: afa92de8a987d5c47a810338b6e046b7, type: 3}
       propertyPath: m_RootOrder
-      value: 9
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 5192158899112050186, guid: afa92de8a987d5c47a810338b6e046b7, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target

@@ -6,7 +6,7 @@ using System.Linq;
 
 public class MatchFinder : MonoBehaviour
 {
-    private UIManager uiMan;
+    public UIManager uiMan;
     public bool isSad = false;
     public GameObject noMatchPanel;
     private Board board;
@@ -780,10 +780,12 @@ public class MatchFinder : MonoBehaviour
                         if (firstMatch == true)
                         {
                             uiMan.happyDog.SetActive(true);
+                            SFXManager.instance.PlaySuperLeafMatch();
                         }
                         else
                         {
                             uiMan.happyDog.SetActive(false);
+                            
                         }
 
                     }

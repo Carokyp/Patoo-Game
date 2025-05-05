@@ -9,7 +9,7 @@ public class RoundManager : MonoBehaviour
     public float roundTime = 60f;
     public UIManager uiMan;
 
-    private LevelManager levelManager;
+    public LevelManager levelManager;
 
     public GameObject replayButton;
     public GameObject nextButton;
@@ -107,34 +107,49 @@ public class RoundManager : MonoBehaviour
 
         if (currentScore >= scoreTarget3)
         {
+            SFXManager.instance.PlayStarSound();
+
             star1.SetActive(true);
             star2.SetActive(true);
             star3.SetActive(true);
+            
+
 
             uiMan.scoreToReach.text = scoreToReach3.ToString("0");
 
         }
         else if (currentScore >= scoreTarget2)
         {
+            SFXManager.instance.PlayStarSound();
+
             star1.SetActive(true);
             star2.SetActive(true);
+            star3.SetActive(false);
+            
             uiMan.scoreToReach.text = scoreToReach3.ToString("0");
         }
         else if (currentScore >= scoreTarget1)
         {
+            SFXManager.instance.PlayStarSound();
+
             star1.SetActive(true);
+            star2.SetActive(false);
+            star3.SetActive(false);
+           
 
             uiMan.scoreToReach.text = scoreToReach2.ToString("0");
 
         }
         else if (currentScore < scoreTarget1)
         {
+            star1.SetActive(false);
+            star2.SetActive(false);
+            star3.SetActive(false);
             
+
             uiMan.scoreToReach.text = scoreToReach1.ToString("0");
 
         }
-
-
 
 
     }
