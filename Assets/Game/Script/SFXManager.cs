@@ -24,7 +24,7 @@ public class SFXManager : MonoBehaviour
         SetMusic();
     }
 
-    public AudioSource leafSound, spiderSound, winSound, loseSound, gameSound, superLeaf, starSound;
+    public AudioSource leafSound, spiderSound, winSound, loseSound, gameSound, superLeaf, starSound, loseStar;
 
     public void PlayLeafMatch()
     {
@@ -48,6 +48,8 @@ public class SFXManager : MonoBehaviour
     {
         leafSound.Stop();
 
+        starSound.Stop();
+
         spiderSound.Stop();
 
         superLeaf.Play();
@@ -56,7 +58,17 @@ public class SFXManager : MonoBehaviour
 
     public void PlayStarSound()
     {
-        starSound.Play();
+        if (!superLeaf.isPlaying)
+        {
+           starSound.Play();
+        }
+        
+    }
+
+    public void PlayLoseStarSound()
+    {
+
+        loseStar.Play();
     }
 
     public void PlaySpiderMatch()

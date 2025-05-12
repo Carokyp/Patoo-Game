@@ -38,6 +38,10 @@ public class CanvasHandler : MonoBehaviour
                 matchFinder.uiMan = canvas[2].GetComponent<UIManager>();
                 board.uiMan = canvas[2].GetComponent<UIManager>();
                 roundManager.levelManager = canvas[2].GetComponent<LevelManager>();
+                roundManager.star1 = canvas[2].GetComponent<UIManager>().star1;
+                roundManager.star2 = canvas[2].GetComponent<UIManager>().star2;
+                roundManager.star3 = canvas[2].GetComponent<UIManager>().star3;
+
                 break;
             case < 2:
                 canvas[0].SetActive(true);
@@ -45,6 +49,9 @@ public class CanvasHandler : MonoBehaviour
                 matchFinder.uiMan = canvas[0].GetComponent<UIManager>();
                 board.uiMan = canvas[0].GetComponent<UIManager>();
                 roundManager.levelManager = canvas[0].GetComponent<LevelManager>();
+                roundManager.star1 = canvas[0].GetComponent<UIManager>().star1;
+                roundManager.star2 = canvas[0].GetComponent<UIManager>().star2;
+                roundManager.star3 = canvas[0].GetComponent<UIManager>().star3;
                 break;
             case <= 2.3f:
                 canvas[1].SetActive(true);
@@ -52,6 +59,9 @@ public class CanvasHandler : MonoBehaviour
                 matchFinder.uiMan = canvas[1].GetComponent<UIManager>();
                 board.uiMan = canvas[1].GetComponent<UIManager>();
                 roundManager.levelManager = canvas[1].GetComponent<LevelManager>();
+                roundManager.star1 = canvas[1].GetComponent<UIManager>().star1;
+                roundManager.star2 = canvas[1].GetComponent<UIManager>().star2;
+                roundManager.star3 = canvas[1].GetComponent<UIManager>().star3;
                 break;
             case >= 2.3f:
                 canvas[3].SetActive(true);
@@ -59,6 +69,9 @@ public class CanvasHandler : MonoBehaviour
                 matchFinder.uiMan = canvas[3].GetComponent<UIManager>();
                 board.uiMan = canvas[3].GetComponent<UIManager>();
                 roundManager.levelManager = canvas[3].GetComponent<LevelManager>();
+                roundManager.star1 = canvas[3].GetComponent<UIManager>().star1;
+                roundManager.star2 = canvas[3].GetComponent<UIManager>().star2;
+                roundManager.star3 = canvas[3].GetComponent<UIManager>().star3;
                 break;
        
 
@@ -68,6 +81,9 @@ public class CanvasHandler : MonoBehaviour
                 matchFinder.uiMan = canvas[0].GetComponent<UIManager>();
                 board.uiMan = canvas[0].GetComponent<UIManager>();
                 roundManager.levelManager = canvas[0].GetComponent<LevelManager>();
+                roundManager.star1 = canvas[0].GetComponent<UIManager>().star1;
+                roundManager.star2 = canvas[0].GetComponent<UIManager>().star2;
+                roundManager.star3 = canvas[0].GetComponent<UIManager>().star3;
                 break;
         }
     }

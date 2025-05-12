@@ -13,6 +13,7 @@ public class UIManager : MonoBehaviour
     public TMP_Text winScore;
     public TMP_Text winText;
     public GameObject winStar0, winStar1, winStar2, winStar3;
+    public GameObject star1, star2, star3;
     public GameObject winDog0, winDog1, winDog2, winDog3;
     public GameObject happyDog,sadDog;
     public GameObject lostPanel;

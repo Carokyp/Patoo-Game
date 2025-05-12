@@ -5356,6 +5356,14 @@ PrefabInstance:
       propertyPath: m_RootOrder
       value: 7
       objectReference: {fileID: 0}
+    - target: {fileID: 8341380191801083457, guid: afa92de8a987d5c47a810338b6e046b7, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 185
+      objectReference: {fileID: 0}
+    - target: {fileID: 8341380191801083457, guid: afa92de8a987d5c47a810338b6e046b7, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 66
+      objectReference: {fileID: 0}
     - target: {fileID: 8517005522553287806, guid: afa92de8a987d5c47a810338b6e046b7, type: 3}
       propertyPath: m_Name
       value: Help Menu

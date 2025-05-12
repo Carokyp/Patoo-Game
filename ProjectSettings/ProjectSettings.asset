@@ -273,7 +273,7 @@ PlayerSettings:
   - m_BuildTarget: 
     m_Icons:
     - serializedVersion: 2
-      m_Icon: {fileID: 2800000, guid: 6ae293027770cf344bfc918978c1fee0, type: 3}
+      m_Icon: {fileID: 2800000, guid: cc6c6c431600a91469035361866651f2, type: 3}
       m_Width: 128
       m_Height: 128
       m_Kind: 0
@@ -782,7 +782,7 @@ PlayerSettings:
   allowUnsafeCode: 0
   useDeterministicCompilation: 1
   enableRoslynAnalyzers: 1
-  selectedPlatform: 2
+  selectedPlatform: 3
   additionalIl2CppArgs: 
   scriptingRuntimeVersion: 1
   gcIncremental: 1

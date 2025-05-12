@@ -43,12 +43,14 @@ public class RoundManager : MonoBehaviour
        
         board = FindObjectOfType<Board>();
         levelManager = FindObjectOfType<LevelManager>();
-           
+        
+
     }
 
     private void Start()
     {
         Time.timeScale = 1;
+
         
     }
 
@@ -107,7 +109,10 @@ public class RoundManager : MonoBehaviour
 
         if (currentScore >= scoreTarget3)
         {
-            SFXManager.instance.PlayStarSound();
+            if (star3.active == false)
+            {
+                SFXManager.instance.PlayStarSound();
+            }
 
             star1.SetActive(true);
             star2.SetActive(true);
@@ -120,7 +125,15 @@ public class RoundManager : MonoBehaviour
         }
         else if (currentScore >= scoreTarget2)
         {
-            SFXManager.instance.PlayStarSound();
+            if (star2.active == false)
+            {
+                SFXManager.instance.PlayStarSound();
+            }
+
+            if (star3.active)
+            {
+                SFXManager.instance.PlayLoseStarSound();
+            }
 
             star1.SetActive(true);
             star2.SetActive(true);
@@ -130,7 +143,16 @@ public class RoundManager : MonoBehaviour
         }
         else if (currentScore >= scoreTarget1)
         {
-            SFXManager.instance.PlayStarSound();
+
+            if (star1.active == false)
+            {
+                SFXManager.instance.PlayStarSound();
+            }
+
+            if (star2.active)
+            {
+                SFXManager.instance.PlayLoseStarSound();
+            }
 
             star1.SetActive(true);
             star2.SetActive(false);
@@ -142,6 +164,12 @@ public class RoundManager : MonoBehaviour
         }
         else if (currentScore < scoreTarget1)
         {
+
+            if (star1.active)
+            {
+                SFXManager.instance.PlayLoseStarSound();
+            }
+
             star1.SetActive(false);
             star2.SetActive(false);
             star3.SetActive(false);
