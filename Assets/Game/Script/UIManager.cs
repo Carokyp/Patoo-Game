@@ -26,8 +26,14 @@ public class UIManager : MonoBehaviour
     public GameObject soundOffButton;
     public GameObject shufflePanel;
 
+    public SFXManager soundManager;
 
     public GameObject roundOverScreen;
+
+    private void Awake()
+    {
+        soundManager = FindObjectOfType<SFXManager>();
+    }
 
     void Start()
     {
@@ -48,6 +54,9 @@ public class UIManager : MonoBehaviour
 
         lostPanel.SetActive(false);
 
+        soundManager.musicOnButton = soundButton;
+        soundManager.musicOffButton = soundOffButton;
+        soundManager.SetMusic();
     }
 
 }

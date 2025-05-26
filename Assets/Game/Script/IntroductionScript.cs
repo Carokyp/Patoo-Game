@@ -5,7 +5,7 @@ using TMPro;
 
 public class IntroductionScript : MonoBehaviour
 {
-    public GameObject pauseButton, helpButton;
+    public GameObject pauseButton, helpButton, nextButton;
     public List<GameObject> speechBubble = new List<GameObject>();
     int speechIndex = 0;
     public Vector2 screenSize;
@@ -57,6 +57,7 @@ public class IntroductionScript : MonoBehaviour
             gameObject.SetActive(false);
             pauseButton.SetActive(true);
             helpButton.SetActive(true);
+            nextButton.SetActive(false);
         }
         
     }

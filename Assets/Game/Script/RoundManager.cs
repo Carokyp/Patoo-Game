@@ -283,8 +283,7 @@ public class RoundManager : MonoBehaviour
 
         if (hasAddBeenShowed == false)
         {
-            ShowAdds.adShowed++;
-            Debug.Log(ShowAdds.adShowed);
+            
             /* StartCoroutine(AddTimer());*/
             hasAddBeenShowed = true;
         }

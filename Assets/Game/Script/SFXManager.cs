@@ -21,7 +21,7 @@ public class SFXManager : MonoBehaviour
 
     private void Start()
     {
-        SetMusic();
+        //SetMusic();
     }
 
     public AudioSource leafSound, spiderSound, winSound, loseSound, gameSound, superLeaf, starSound, loseStar;
