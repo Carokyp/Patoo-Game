@@ -13,6 +13,7 @@ public class ReSize : MonoBehaviour
     public GameObject bush;
     public Vector2 bushScale;
 
+
     private void Awake()
     {
         bushScale = bush.transform.localScale;
@@ -44,8 +45,12 @@ public class ReSize : MonoBehaviour
         {
             transform.localScale = Vector3.one * ratio / refRatio;
             Vector2 strech = bushScale;
+
+
             strech.y *= refRatio / ratio;
             bush.transform.localScale = strech;
+
+
 
 
         }
@@ -54,6 +59,7 @@ public class ReSize : MonoBehaviour
             Vector2 strech = bushScale;
             strech.x *= ratio / refRatio;
             bush.transform.localScale = strech;
+          
         }
 
     }
