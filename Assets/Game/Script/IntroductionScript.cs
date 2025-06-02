@@ -9,6 +9,7 @@ public class IntroductionScript : MonoBehaviour
     public List<GameObject> speechBubble = new List<GameObject>();
     int speechIndex = 0;
     public Vector2 screenSize;
+    private bool playAnimation = false;
 
     private void Awake()
     {
@@ -49,16 +50,43 @@ public class IntroductionScript : MonoBehaviour
 
             speechIndex++;
             speechBubble[speechIndex].SetActive(true);
+            if (speechIndex >= speechBubble.Count -1)
+            {
+                if (!playAnimation)
+                {
+                  Time.timeScale = 1;
+                  StartCoroutine(AnimationTimer());
+                  playAnimation = true;
+                }
+
+            }
         }
         else
         {
-            Time.timeScale = 1;
-            speechBubble[speechIndex].SetActive(false);
-            gameObject.SetActive(false);
-            pauseButton.SetActive(true);
-            helpButton.SetActive(true);
-            nextButton.SetActive(false);
+           
+            
         }
+        
+    }
+
+    IEnumerator AnimationTimer()
+    {
+        //speechBubble[speechIndex].SetActive(false);
+        //speechBubble[speechBubble.Count -1].SetActive(true);
+        Animator handAnimator = speechBubble[speechBubble.Count -1].GetComponent<Animator>();
+        nextButton.SetActive(false);
+
+        yield return new WaitForSeconds(2f);
+
+        handAnimator.Play("Hand Vertical Animation");
+
+        yield return new WaitForSeconds(2f);
+
+        speechBubble[speechIndex].SetActive(false);
+            
+        gameObject.SetActive(false);
+        pauseButton.SetActive(true);
+        helpButton.SetActive(true);
         
     }
 }
