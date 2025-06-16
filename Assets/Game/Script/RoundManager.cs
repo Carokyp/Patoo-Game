@@ -51,7 +51,7 @@ public class RoundManager : MonoBehaviour
     {
         Time.timeScale = 1;
 
-        
+        AddManager.instance.gamesPlayed++;
     }
 
     void Update()
@@ -281,10 +281,10 @@ public class RoundManager : MonoBehaviour
 
         }
 
-        if (hasAddBeenShowed == false)
+        if (hasAddBeenShowed == false && AddManager.instance.gamesPlayed >= 3)
         {
             
-            /* StartCoroutine(AddTimer());*/
+            StartCoroutine(AddTimer());
             hasAddBeenShowed = true;
         }
   
@@ -292,8 +292,9 @@ public class RoundManager : MonoBehaviour
     IEnumerator AddTimer() 
     {
         yield return new WaitForSeconds(2f);
-        /*ShowAdds.adShowed++;
-        Debug.Log(ShowAdds.adShowed);*/
+        AddManager.instance.interstitial.ShowAd();
+        AddManager.instance.interstitial.LoadAd();
+        AddManager.instance.gamesPlayed = 0;
     
     }
 

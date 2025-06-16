@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.Analytics;
 
 public class LevelManager : MonoBehaviour
 {
@@ -15,9 +16,16 @@ public class LevelManager : MonoBehaviour
         
     }
 
+    
     public void LoadLevel()
     {
-        
+        AnalyticsResult analyticsResult = Analytics.CustomEvent(
+
+            "Levels Progress", new Dictionary<string, object> {
+                {"Level", nextLevelToLoad} });
+
+        Debug.LogWarning("Analytics" + analyticsResult);
+
         SceneManager.LoadScene(nextLevelToLoad);
 
     }
